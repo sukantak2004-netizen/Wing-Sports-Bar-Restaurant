@@ -408,6 +408,9 @@
       object-fit: cover;
       object-position: center;
     }
+      .experience-card {
+      display: flex !important; flex-direction: column !important; height: 100% !important;
+    }
   </style>
 </head>
 
@@ -737,19 +740,19 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch">
 
         <!-- Card 1 -->
-        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full reveal">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-red to-wing-red-dark text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-wing-red/25">
             <i class="fas fa-tv"></i>
           </div>
           <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-red mb-2">Visual Tech</span>
           <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">17 Stadium 4K Screens</h3>
-          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-1">
             Zero blind spots. Every seat and booth is calibrated with a clear sightline to 4K displays and our 150-inch laser projector wall showing simultaneous multi-league feeds.
           </p>
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10">
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10 mt-auto">
             <span class="tag-pill bg-wing-red/10 dark:bg-wing-red/20 text-wing-red">150" Projector</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">4K UHD</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Multi-Game Feeds</span>
@@ -757,16 +760,16 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-amber/20 dark:border-wing-amber/30 shadow-md hover:border-wing-amber dark:hover:border-wing-amber hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-amber/20 dark:border-wing-amber/30 shadow-md hover:border-wing-amber dark:hover:border-wing-amber hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full reveal">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-amber to-wing-orange text-wing-charcoal flex items-center justify-center text-2xl mb-6 shadow-lg shadow-wing-amber/25">
             <i class="fas fa-broadcast-tower"></i>
           </div>
           <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-orange mb-2">Acoustic Power</span>
           <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">Stadium Audio Zones</h3>
-          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-1">
             Overhead multi-zone surround sound brings the roar of the arena directly to your table. Switch audio channels for your favorite game or enjoy late-night DJ sets.
           </p>
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-amber/15 dark:border-white/10">
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-amber/15 dark:border-white/10 mt-auto">
             <span class="tag-pill bg-wing-amber/15 dark:bg-wing-amber/20 text-wing-orange font-bold">Zone Audio</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Booth Control</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Live DJ Rig</span>
@@ -774,16 +777,16 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full reveal">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-red-dark to-wing-charcoal text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-black/25">
             <i class="fas fa-trophy"></i>
           </div>
           <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-red mb-2">Weekly Action</span>
           <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">Game-Night Action</h3>
-          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-1">
             Every Tuesday 30+ teams battle for bar tabs, Thursday karaoke turns up the volume, and Saturday UFC fight nights pack the floor. There's always a reason to gather.
           </p>
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10">
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10 mt-auto">
             <span class="tag-pill bg-wing-red/10 dark:bg-wing-red/20 text-wing-red">Trivia Tuesdays</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Reaper Challenge</span>
             <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">UFC PPVs</span>
@@ -812,10 +815,10 @@
       </div>
 
       <!-- Fan Quote Cards (No Images) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 reveal items-stretch">
 
         <!-- Review 1 -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between">
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between h-full">
           <div>
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-2">
@@ -833,13 +836,13 @@
               "Best game day spot in Austin hands down. 17 screens showing every game at once, wings are crispy with legit heat, and the sound zone in the booth makes it feel like an actual stadium."
             </p>
           </div>
-          <div class="flex gap-2 text-[10px] text-wing-red font-bold uppercase tracking-wider pt-3 border-t border-wing-red/10 dark:border-white/10">
+          <div class="flex gap-2 text-[10px] text-wing-red font-bold uppercase tracking-wider pt-3 border-t border-wing-red/10 dark:border-white/10 mt-auto">
             <span>#NFLSundayHQ</span> <span>·</span> <span>#BestWingsATX</span>
           </div>
         </div>
 
         <!-- Review 2 -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-amber/20 dark:border-wing-amber/30 shadow-md flex flex-col justify-between">
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-amber/20 dark:border-wing-amber/30 shadow-md flex flex-col justify-between h-full">
           <div>
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-2">
@@ -857,13 +860,13 @@
               "The Mango Habanero wings are unmatched. 100% scratch sauces tossed fresh. Plus Trivia Tuesday with a full flight of local Texas craft beer is now our weekly crew tradition."
             </p>
           </div>
-          <div class="flex gap-2 text-[10px] text-wing-orange font-bold uppercase tracking-wider pt-3 border-t border-wing-amber/15 dark:border-white/10">
+          <div class="flex gap-2 text-[10px] text-wing-orange font-bold uppercase tracking-wider pt-3 border-t border-wing-amber/15 dark:border-white/10 mt-auto">
             <span>#MangoHabanero</span> <span>·</span> <span>#TriviaTuesday</span>
           </div>
         </div>
 
         <!-- Review 3 -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between">
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between h-full">
           <div>
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-2">

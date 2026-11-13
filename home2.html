@@ -228,6 +228,7 @@
     .ent-card {
       background: #FFFFFF; border-radius: 26px; overflow: hidden;
       border: 1px solid #FFE0B2; transition: all 0.35s ease;
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .dark .ent-card { background: #2D2824; border-color: #4E443C; }
     .ent-card:hover { transform: translateY(-8px); box-shadow: 0 30px 55px -18px rgba(211,47,47,0.35); border-color: #D32F2F; }
@@ -238,6 +239,7 @@
       border: 1px solid rgba(255,255,255,0.1);
       background: rgba(20,18,16,0.55);
       backdrop-filter: blur(14px);
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .package-card:hover { transform: translateY(-8px); border-color: #FFB300; box-shadow: 0 30px 60px -20px rgba(255,179,0,0.4); }
 
@@ -808,73 +810,73 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-7xl mx-auto items-stretch">
 
         <!-- Trivia -->
         <div class="ent-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/trivia_night_friends.png" alt="Trivia night crowd" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-red text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Tuesdays</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <div class="flex items-center gap-2 mb-2">
               <i class="fas fa-brain text-wing-red text-xs"></i>
               <span class="text-[9px] font-bold uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5]">7:30 PM</span>
             </div>
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Trivia Night</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">Teams of 4. $100 bar tab for winners. Free entry — wings encouraged.</p>
-            <a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">Teams of 4. $100 bar tab for winners. Free entry — wings encouraged.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
 
         <!-- Karaoke -->
         <div class="ent-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/karaoke_night_microphone.png" alt="Karaoke microphone" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-orange text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Thursdays</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <div class="flex items-center gap-2 mb-2">
               <i class="fas fa-microphone text-wing-orange text-xs"></i>
               <span class="text-[9px] font-bold uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5]">9:00 PM</span>
             </div>
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Karaoke Night</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">$0.75 wings after 9, $4 drafts. The mic is hot — bring your A-game.</p>
-            <a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">$0.75 wings after 9, $4 drafts. The mic is hot — bring your A-game.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
 
         <!-- Wing Challenge -->
         <div class="ent-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/reaper_challenge_wings.png" alt="Spicy wings challenge" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-red-dark text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Fridays</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <div class="flex items-center gap-2 mb-2">
               <i class="fas fa-pepper-hot text-wing-red text-xs"></i>
               <span class="text-[9px] font-bold uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5]">8:00 PM</span>
             </div>
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Reaper Challenge</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">Finish 6 Reaper wings in 5 minutes — free meal + t-shirt. Waiver required.</p>
-            <a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">Finish 6 Reaper wings in 5 minutes — free meal + t-shirt. Waiver required.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
 
         <!-- DJ Night -->
         <div class="ent-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/live_dj_night.png" alt="DJ night crowd" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-amber text-wing-charcoal text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Saturdays</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <div class="flex items-center gap-2 mb-2">
               <i class="fas fa-compact-disc text-wing-amber text-xs"></i>
               <span class="text-[9px] font-bold uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5]">10:00 PM</span>
             </div>
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Live DJ Night</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">Post-game DJ sets, bottle specials, and late-night eats until close.</p>
-            <a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">Post-game DJ sets, bottle specials, and late-night eats until close.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="events.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Learn more <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
       </div>
@@ -909,7 +911,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <!-- Package 1 -->
         <div class="package-card p-6 sm:p-8 reveal flex flex-col h-full">
@@ -923,7 +925,7 @@
             <span class="font-display text-4xl sm:text-5xl text-wing-amber leading-none">$99</span>
             <span class="text-white/80 text-xs mb-1.5">/ table</span>
           </div>
-          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-grow">
+          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-1">
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> Reserved high-top for 4</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> Dedicated 55" screen at table</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> 20 wings + loaded fries</li>
@@ -945,7 +947,7 @@
             <span class="font-display text-4xl sm:text-5xl text-wing-amber leading-none">$249</span>
             <span class="text-white/80 text-xs mb-1.5">/ party</span>
           </div>
-          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-grow">
+          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-1">
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> Semi-private section for 10</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> 3-screen wall with dedicated audio</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> 60 wings + 2 party platters</li>
@@ -967,7 +969,7 @@
             <span class="font-display text-4xl sm:text-5xl text-wing-amber leading-none">$599</span>
             <span class="text-white/80 text-xs mb-1.5">/ event</span>
           </div>
-          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-grow">
+          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-white/75 flex-1">
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> Private room for 25</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> 120" projector + surround sound</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-amber mt-1 text-[10px] shrink-0"></i> 150 wings + 4 party platters</li>

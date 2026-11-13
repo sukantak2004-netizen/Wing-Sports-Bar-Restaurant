@@ -258,7 +258,8 @@
     .info-card {
       border-radius: 22px; padding: 1.5rem;
       border: 1px solid #FFE0B2; background: #FFFFFF;
-      transition: all 0.3s ease; height: 100%;
+      transition: all 0.3s ease;
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .dark .info-card { background: #2D2824; border-color: #4E443C; }
     .info-card:hover { transform: translateY(-4px); border-color: #D32F2F; box-shadow: 0 20px 40px -16px rgba(211,47,47,0.3); }
@@ -554,9 +555,9 @@
   <!-- ============================================= -->
   <section class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
-        <div class="info-card reveal">
+        <div class="info-card reveal flex flex-col h-full">
           <div class="info-icon bg-wing-red/10 dark:bg-wing-red/20">
             <i class="fas fa-map-marker-alt text-wing-red text-lg"></i>
           </div>
@@ -564,7 +565,7 @@
           <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">1420 Stadium Drive, Unit 3<br>Austin, TX 78704</p>
         </div>
 
-        <div class="info-card reveal">
+        <div class="info-card reveal flex flex-col h-full">
           <div class="info-icon bg-wing-orange/10 dark:bg-wing-orange/20">
             <i class="fas fa-phone text-wing-orange text-lg"></i>
           </div>
@@ -572,7 +573,7 @@
           <a href="tel:+15125550142" class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed hover:text-wing-red dark:hover:text-wing-amber transition">+1 (512) 555-0142</a>
         </div>
 
-        <div class="info-card reveal">
+        <div class="info-card reveal flex flex-col h-full">
           <div class="info-icon bg-wing-amber/10 dark:bg-wing-amber/20">
             <i class="fas fa-envelope text-wing-amber text-lg"></i>
           </div>
@@ -580,7 +581,7 @@
           <a href="mailto:hello@wingdupbar.com" class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed hover:text-wing-red dark:hover:text-wing-amber transition break-all">hello@wingdupbar.com</a>
         </div>
 
-        <div class="info-card reveal">
+        <div class="info-card reveal flex flex-col h-full">
           <div class="info-icon bg-wing-red/10 dark:bg-wing-red/20">
             <i class="fas fa-clock text-wing-red text-lg"></i>
           </div>

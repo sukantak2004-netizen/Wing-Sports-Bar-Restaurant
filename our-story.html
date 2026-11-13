@@ -237,6 +237,7 @@
     .team-card {
       border-radius: 24px; overflow: hidden; background: #FFFFFF;
       border: 1px solid #FFE0B2; transition: all 0.35s ease;
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .dark .team-card { background: #2D2824; border-color: #4E443C; }
     .team-card:hover { transform: translateY(-6px); border-color: #D32F2F; box-shadow: 0 25px 50px -18px rgba(211,47,47,0.35); }
@@ -611,7 +612,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <div class="value-card reveal">
           <div class="value-icon bg-wing-red/10 dark:bg-wing-red/20">
@@ -665,49 +666,49 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
-        <div class="team-card reveal">
-          <div class="h-56 sm:h-64 overflow-hidden">
+        <div class="team-card reveal flex flex-col h-full">
+          <div class="h-56 sm:h-64 overflow-hidden shrink-0 w-full">
             <img src="assets/author_marco.jpg" alt="Marco — Co-Founder" class="w-full h-full object-cover">
           </div>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Marco Reyes</h3>
             <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Co-Founder &amp; Head Chef</p>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">The sauce mastermind. Every recipe on the menu started in Marco's kitchen notebook.</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-1">The sauce mastermind. Every recipe on the menu started in Marco's kitchen notebook.</p>
           </div>
         </div>
 
-        <div class="team-card reveal">
-          <div class="h-56 sm:h-64 overflow-hidden">
+        <div class="team-card reveal flex flex-col h-full">
+          <div class="h-56 sm:h-64 overflow-hidden shrink-0 w-full">
             <img src="assets/author_elena.jpg" alt="Elena — Co-Founder" class="w-full h-full object-cover">
           </div>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Elena Reyes</h3>
             <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Co-Founder &amp; GM</p>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Runs the floor, the team, and the game-day logistics. If it's smooth, Elena made it happen.</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-1">Runs the floor, the team, and the game-day logistics. If it's smooth, Elena made it happen.</p>
           </div>
         </div>
 
-        <div class="team-card reveal">
-          <div class="h-56 sm:h-64 overflow-hidden">
+        <div class="team-card reveal flex flex-col h-full">
+          <div class="h-56 sm:h-64 overflow-hidden shrink-0 w-full">
             <img src="assets/author_james.jpg" alt="James — Bar Manager" class="w-full h-full object-cover">
           </div>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">James Carter</h3>
             <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Bar Manager</p>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Curates all 32 taps and builds the cocktail menu. Ask him for a recommendation — trust him.</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-1">Curates all 32 taps and builds the cocktail menu. Ask him for a recommendation — trust him.</p>
           </div>
         </div>
 
-        <div class="team-card reveal">
-          <div class="h-56 sm:h-64 overflow-hidden">
+        <div class="team-card reveal flex flex-col h-full">
+          <div class="h-56 sm:h-64 overflow-hidden shrink-0 w-full">
             <img src="assets/author_priya.jpg" alt="Priya — Event Director" class="w-full h-full object-cover">
           </div>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Priya Shah</h3>
             <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Event Director</p>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Plans every trivia night, watch party, and private event. She makes the fun happen.</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-1">Plans every trivia night, watch party, and private event. She makes the fun happen.</p>
           </div>
         </div>
       </div>

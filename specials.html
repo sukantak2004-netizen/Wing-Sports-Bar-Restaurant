@@ -192,7 +192,7 @@
     .deal-card {
       background: #FFFFFF; border-radius: 24px; overflow: hidden;
       border: 1px solid #FFE0B2; transition: all 0.35s ease;
-      display: flex; flex-direction: column; height: 100%;
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .dark .deal-card { background: #2D2824; border-color: #4E443C; }
     .deal-card:hover {
@@ -495,18 +495,18 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <!-- Monday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/comedy_night.png" alt="Industry night wings" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-gray-600 text-white">Monday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Industry Night</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">50% off wings for service industry workers with valid proof. $4 drafts all day.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">50% off wings for service industry workers with valid proof. $4 drafts all day.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">50% OFF</span>
               <span class="tag-pill bg-green-500/15 text-green-700 dark:text-green-400">All Day</span>
             </div>
@@ -514,15 +514,15 @@
         </div>
 
         <!-- Tuesday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/trivia_night_friends.png" alt="Taco Tuesday specials" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-wing-red text-white">Tuesday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Taco &amp; Trivia Tuesday</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">$2 street tacos all night. Trivia starts at 7:30 — winners get a $100 bar tab.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">$2 street tacos all night. Trivia starts at 7:30 — winners get a $100 bar tab.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">$2 TACOS</span>
               <span class="tag-pill bg-wing-amber/20 text-wing-orange">7:30 PM</span>
             </div>
@@ -530,15 +530,15 @@
         </div>
 
         <!-- Wednesday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/win.png" alt="Wing Wednesday" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-wing-orange text-white">Wednesday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">50¢ Wing Wednesday</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">50¢ wings all day, any sauce. Dine-in only. Minimum 6 wings per order.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">50¢ wings all day, any sauce. Dine-in only. Minimum 6 wings per order.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">$0.50 / wing</span>
               <span class="tag-pill bg-green-500/15 text-green-700 dark:text-green-400">All Day</span>
             </div>
@@ -546,15 +546,15 @@
         </div>
 
         <!-- Thursday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/karaoke_night_microphone.png" alt="Karaoke Thursday" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-wing-red-dark text-white">Thursday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Karaoke &amp; Wing Night</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">$0.75 wings after 9pm, $4 drafts. Karaoke starts at 9 — the mic is hot.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">$0.75 wings after 9pm, $4 drafts. Karaoke starts at 9 — the mic is hot.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">$0.75 / wing</span>
               <span class="tag-pill bg-wing-amber/20 text-wing-orange">After 9 PM</span>
             </div>
@@ -562,15 +562,15 @@
         </div>
 
         <!-- Friday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/reaper_challenge.png" alt="Reaper challenge Friday" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-black text-wing-amber border border-wing-amber/40">Friday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Reaper Challenge Friday</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">$10 entry. Finish 6 Reaper wings in 5 minutes — free meal + t-shirt. Waiver required.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">$10 entry. Finish 6 Reaper wings in 5 minutes — free meal + t-shirt. Waiver required.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">$10 ENTRY</span>
               <span class="tag-pill bg-wing-red/15 text-wing-red">8:00 PM</span>
             </div>
@@ -578,15 +578,15 @@
         </div>
 
         <!-- Saturday -->
-        <div class="deal-card reveal">
-          <div class="h-36 sm:h-40 overflow-hidden relative">
+        <div class="deal-card reveal flex flex-col h-full">
+          <div class="h-36 sm:h-40 overflow-hidden relative shrink-0 w-full">
             <img src="assets/live_dj_night.png" alt="Saturday DJ night" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 deal-day bg-field-green text-white">Saturday</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-1">DJ Night &amp; Late Eats</h3>
-            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-grow">Live DJ from 10pm, $5 wells, $15 beer towers. Late-night menu until close.</p>
-            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20">
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-3 flex-1">Live DJ from 10pm, $5 wells, $15 beer towers. Late-night menu until close.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-wing-red/10 dark:border-wing-red/20 mt-auto">
               <span class="font-display text-2xl text-wing-red">$5 WELLS</span>
               <span class="tag-pill bg-wing-amber/20 text-wing-orange">10 PM – Close</span>
             </div>
@@ -712,7 +712,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <!-- Bundle 1 -->
         <div class="bundle-card p-6 sm:p-8 reveal flex flex-col h-full">
@@ -833,7 +833,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto items-stretch">
 
         <div class="tier-card reveal flex flex-col h-full">
           <div class="flex items-center gap-3 mb-4">

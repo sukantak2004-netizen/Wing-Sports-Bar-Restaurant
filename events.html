@@ -222,6 +222,7 @@
       border-radius: 28px; overflow: hidden; position: relative;
       transition: all 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
       border: 1px solid rgba(255,255,255,0.1);
+      display: flex !important; flex-direction: column !important;
     }
     .featured-card img { transition: transform 0.7s ease; }
     .featured-card:hover { transform: translateY(-8px); border-color: #FFB300; box-shadow: 0 35px 65px -20px rgba(255,179,0,0.35); }
@@ -244,6 +245,7 @@
     .series-card {
       background: #FFFFFF; border-radius: 24px; overflow: hidden;
       border: 1px solid #FFE0B2; transition: all 0.35s ease;
+      display: flex !important; flex-direction: column !important; height: 100% !important;
     }
     .dark .series-card { background: #2D2824; border-color: #4E443C; }
     .series-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -15px rgba(211,47,47,0.35); border-color: #D32F2F; }
@@ -713,10 +715,10 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <!-- Event 1 -->
-        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] reveal block">
+        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] md:h-[440px] reveal flex flex-col relative">
           <img src="assets/nfl_sunday_ticket_kickoff.png" alt="NFL Sunday football" class="w-full h-full object-cover">
           <div class="featured-overlay"></div>
           <div class="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
@@ -731,7 +733,7 @@
         </a>
 
         <!-- Event 2 -->
-        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] reveal block">
+        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] md:h-[440px] reveal flex flex-col relative">
           <img src="assets/ufc_watch_party.png" alt="UFC fight night" class="w-full h-full object-cover">
           <div class="featured-overlay"></div>
           <div class="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
@@ -746,7 +748,7 @@
         </a>
 
         <!-- Event 3 -->
-        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] reveal block">
+        <a href="contact.html" class="featured-card h-[380px] sm:h-[420px] md:h-[440px] reveal flex flex-col relative">
           <img src="assets/live_dj_night.png" alt="Live DJ party" class="w-full h-full object-cover">
           <div class="featured-overlay"></div>
           <div class="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
@@ -780,7 +782,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <!-- Package 1 -->
         <div class="bg-white dark:bg-wing-smoke rounded-3xl p-6 sm:p-8 reveal flex flex-col h-full border border-wing-red/15 dark:border-wing-red/30 shadow-lg hover:shadow-2xl transition-all duration-300">
@@ -794,7 +796,7 @@
             <span class="font-display text-4xl sm:text-5xl text-wing-red leading-none">$99</span>
             <span class="text-wing-ash dark:text-[#B9AFA5] text-xs mb-1.5">/ table</span>
           </div>
-          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] flex-grow">
+          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] flex-1">
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> Reserved high-top for 4</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> Dedicated 55" screen at table</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> 20 wings + loaded fries</li>
@@ -838,7 +840,7 @@
             <span class="font-display text-4xl sm:text-5xl text-wing-red leading-none">$599</span>
             <span class="text-wing-ash dark:text-[#B9AFA5] text-xs mb-1.5">/ event</span>
           </div>
-          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] flex-grow">
+          <ul class="space-y-2.5 mb-6 text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] flex-1">
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> Private room for 25</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> 120" projector + surround sound</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-wing-red mt-1 text-[10px] shrink-0"></i> 150 wings + 4 party platters</li>
@@ -874,41 +876,41 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto items-stretch">
 
         <div class="series-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/craft_draft_pint.png" alt="Fantasy football draft party" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-red text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Monthly</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Fantasy Draft Party</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">Private section, draft board, food platters, and a dedicated server. Book your league's draft in August.</p>
-            <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Inquire <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">Private section, draft board, food platters, and a dedicated server. Book your league's draft in August.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Inquire <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
 
         <div class="series-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/wing_eating_championship.png" alt="Wing eating contest" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-orange text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Quarterly</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Wing Eating Championship</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">$500 grand prize, live DJ, and a spot on our Wall of Flame. 10-minute timed heats.</p>
-            <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Enter Contest <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">$500 grand prize, live DJ, and a spot on our Wall of Flame. 10-minute timed heats.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Enter Contest <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
 
         <div class="series-card reveal flex flex-col h-full">
-          <div class="h-40 sm:h-44 overflow-hidden relative">
+          <div class="h-40 sm:h-44 overflow-hidden relative shrink-0 w-full">
             <img src="assets/comedy_night.png" alt="Live comedy night" class="w-full h-full object-cover">
             <span class="absolute top-3 left-3 bg-wing-amber text-wing-charcoal text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Monthly</span>
           </div>
-          <div class="p-5 flex flex-col flex-grow">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Comedy Night</h3>
-            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-grow">Local comics, craft beer, and full menu. $15 cover, doors at 8pm, show at 9pm.</p>
-            <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Get Tickets <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-4 flex-1">Local comics, craft beer, and full menu. $15 cover, doors at 8pm, show at 9pm.</p>
+            <div class="mt-auto pt-3 border-t border-wing-red/10 dark:border-wing-red/20"><a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition inline-flex items-center">Get Tickets <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a></div>
           </div>
         </div>
       </div>
