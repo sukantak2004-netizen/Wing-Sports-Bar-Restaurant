@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wing &amp; Sports Bar · Gallery · Wings, Crowds &amp; Game Nights</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D32F2F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7v10l10 5 10-5V7l-10-5zM2 7l10 5 10-5M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="description" content="Wing & Sports Bar gallery — inside the bar, game nights, wings close-ups, and the crowd. See the atmosphere before you visit.">
+
+  <script src="assets/tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'wing-red': '#D32F2F',
+            'wing-red-dark': '#B71C1C',
+            'wing-orange': '#F57C00',
+            'wing-amber': '#FFB300',
+            'wing-cream': '#FFF8E1',
+            'wing-charcoal': '#1E1A17',
+            'wing-dark': '#0F0D0B',
+            'wing-ash': '#6D645C',
+            'wing-smoke': '#2D2824',
+            'stadium-dark': '#0A0A0A',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.9s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    html.dark { color-scheme: dark; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFF8E1;
+      color: #1E1A17;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #0F0D0B; color: #F5F0E8; }
+    h1, h2, h3, .display-font { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1.05; }
+    .serif-accent { font-family: 'Playfair Display', serif; }
+
+    body::-webkit-scrollbar { width: 8px; }
+    body::-webkit-scrollbar-track { background: #FFF8E1; }
+    body::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 10px; }
+    .dark body::-webkit-scrollbar-track { background: #1E1A17; }
+
+    /* Navbar */
+    .nav-link {
+      position: relative; font-weight: 600; color: #1E1A17; transition: color 0.3s;
+      font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+    }
+    .dark .nav-link { color: #F5F0E8; }
+    .nav-link:hover { color: #D32F2F; }
+    .nav-link.active { color: #D32F2F !important; }
+    .nav-link.active::after {
+      content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+      width: 22px; height: 3px; background: #D32F2F; border-radius: 2px;
+    }
+    .dark .nav-link.active { color: #FF8A65 !important; }
+    .dark .nav-link.active::after { background: #FF8A65; }
+    .dark .nav-link:hover { color: #FF8A65; }
+
+    /* Dropdown */
+    .dropdown-menu-custom {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      min-width: 200px; background: #FFFFFF; border-radius: 16px; padding: 0.5rem 0;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15), 0 4px 10px -4px rgba(0,0,0,0.1);
+      opacity: 0; visibility: hidden; transition: all 0.25s ease; z-index: 1000;
+      border: 1px solid #FFE0B2;
+    }
+    .dark .dropdown-menu-custom { background: #2D2824; border-color: #D32F2F; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5); }
+    .dropdown-custom:hover .dropdown-menu-custom { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .dropdown-item {
+      display: flex; align-items: center; padding: 0.65rem 1.4rem;
+      transition: all 0.2s; color: #1E1A17; font-size: 0.85rem; letter-spacing: 0.02em; font-weight: 500;
+    }
+    .dark .dropdown-item { color: #F5F0E8; }
+    .dropdown-item:hover { background-color: #FFF8E1; color: #B71C1C; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background-color: #D32F2F; color: #FFFFFF !important; padding-left: 1.7rem; }
+    .dropdown-item.active { background-color: #FFE0B2; color: #B71C1C !important; font-weight: 700; }
+    .dark .dropdown-item.active { background-color: #D32F2F; color: #FFFFFF !important; }
+
+    .mobile-menu {
+      background: #FFFFFF; max-height: 0; overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 0 24px 24px;
+    }
+    .dark .mobile-menu { background: #2D2824; }
+    .mobile-menu.open { max-height: 85vh; overflow-y: auto; }
+
+    .btn-primary {
+      background-color: #D32F2F; color: #FFFFFF; font-weight: 700; border-radius: 50px;
+      transition: all 0.3s ease; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5); white-space: nowrap;
+    }
+    .btn-primary:hover {
+      background-color: #B71C1C; transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(211,47,47,0.6);
+    }
+    .btn-outline {
+      border: 2px solid #1E1A17; color: #1E1A17; background: transparent; border-radius: 50px;
+      font-weight: 700; transition: all 0.3s; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { background-color: #1E1A17; color: #FFF8E1; transform: translateY(-2px); }
+    .dark .btn-outline { border-color: #F5F0E8; color: #F5F0E8; }
+    .dark .btn-outline:hover { background-color: #F5F0E8; color: #1E1A17; }
+
+    /* Gallery hero */
+    .gallery-hero { position: relative; overflow: hidden; background: #0A0A0A; }
+    .gallery-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('assets/hero_gallery.jpg');
+      background-size: cover; background-position: center;
+      opacity: 0.35; filter: saturate(1.1) contrast(1.05);
+    }
+    .gallery-hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(255,179,0,0.16) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.6) 45%, rgba(10,10,10,0.97) 100%);
+    }
+
+    .divider-flame { display: inline-flex; align-items: center; gap: 0.8rem; color: #D32F2F; }
+    .divider-flame::before,
+    .divider-flame::after { content: ''; width: 40px; height: 2px; background: currentColor; opacity: 0.4; border-radius: 2px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(211,47,47,0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.1) 0%, transparent 40%);
+    }
+    .dark .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,138,101,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.08) 0%, transparent 40%);
+    }
+
+    .section-title { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+    .section-title-sm { font-size: clamp(2rem, 5vw, 3.5rem); }
+    .break-safe { overflow-wrap: anywhere; word-break: break-word; }
+
+    /* Filter tabs */
+    .filter-tab {
+      padding: 0.55rem 1.2rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; border: 1.5px solid #FFE0B2;
+      color: #6D645C; transition: all 0.3s; cursor: pointer; white-space: nowrap;
+    }
+    @media (min-width: 640px) { .filter-tab { padding: 0.65rem 1.4rem; font-size: 0.75rem; } }
+    .dark .filter-tab { border-color: #4E443C; color: #B9AFA5; }
+    .filter-tab:hover { border-color: #D32F2F; color: #D32F2F; }
+    .dark .filter-tab:hover { border-color: #FF8A65; color: #FF8A65; }
+    .filter-tab.active {
+      background: #D32F2F; border-color: #D32F2F; color: #FFFFFF;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5);
+    }
+
+    /* Masonry-style gallery grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      grid-auto-rows: 10px;
+    }
+    @media (min-width: 640px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; grid-auto-rows: 12px; } }
+    @media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 1.1rem; grid-auto-rows: 14px; } }
+
+    .gallery-item {
+      position: relative; border-radius: 18px; overflow: hidden; cursor: pointer;
+      transition: all 0.4s ease; border: 1px solid rgba(255,224,178,0.4);
+      background: #2D2824;
+    }
+    .dark .gallery-item { border-color: rgba(78,68,60,0.6); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 25px 45px -15px rgba(211,47,47,0.4); border-color: #D32F2F; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item .item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.05) 55%, transparent 100%);
+      opacity: 0; transition: opacity 0.35s ease;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0.9rem;
+    }
+    .gallery-item:hover .item-overlay { opacity: 1; }
+    .gallery-item .zoom-icon {
+      position: absolute; top: 0.7rem; right: 0.7rem;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,179,0,0.95); color: #1E1A17;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: scale(0.8); transition: all 0.35s ease;
+    }
+    .gallery-item:hover .zoom-icon { opacity: 1; transform: scale(1); }
+
+    /* Heights for masonry */
+    .gi-tall { grid-row: span 32; }
+    .gi-med { grid-row: span 26; }
+    .gi-short { grid-row: span 20; }
+    @media (min-width: 640px) {
+      .gi-tall { grid-row: span 34; }
+      .gi-med { grid-row: span 27; }
+      .gi-short { grid-row: span 21; }
+    }
+    @media (min-width: 1024px) {
+      .gi-tall { grid-row: span 36; }
+      .gi-med { grid-row: span 28; }
+      .gi-short { grid-row: span 22; }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(5,4,3,0.95); backdrop-filter: blur(12px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem;
+      opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .lightbox.open { opacity: 1; visibility: visible; }
+    .lightbox-content {
+      max-width: 90vw; max-height: 85vh; border-radius: 20px; overflow: hidden;
+      box-shadow: 0 40px 80px -20px rgba(0,0,0,0.9);
+      transform: scale(0.95); transition: transform 0.3s ease;
+      position: relative;
+    }
+    .lightbox.open .lightbox-content { transform: scale(1); }
+    .lightbox-content img { max-width: 90vw; max-height: 85vh; object-fit: contain; display: block; }
+    .lightbox-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2.5rem 1.25rem 1.25rem;
+      background: linear-gradient(to top, rgba(5,4,3,0.95), transparent);
+      color: white;
+    }
+    .lightbox-close, .lightbox-prev, .lightbox-next {
+      position: absolute; z-index: 2010;
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      color: white; transition: all 0.25s ease; backdrop-filter: blur(8px);
+    }
+    .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+      background: #D32F2F; border-color: #D32F2F; transform: scale(1.05);
+    }
+    .lightbox-close { top: 1rem; right: 1rem; }
+    .lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-prev:hover, .lightbox-next:hover { transform: translateY(-50%) scale(1.05); }
+
+    /* Video card */
+    .video-card {
+      position: relative; border-radius: 22px; overflow: hidden;
+      cursor: pointer; transition: all 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .video-card:hover { transform: translateY(-5px); border-color: #FFB300; box-shadow: 0 30px 55px -18px rgba(255,179,0,0.35); }
+    .video-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+    .video-card:hover img { transform: scale(1.08); }
+    .video-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 55%, rgba(10,10,10,0.05) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.1rem;
+    }
+    .play-btn {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(255,179,0,0.95); color: #1E1A17;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; transition: all 0.35s ease;
+      box-shadow: 0 10px 30px -6px rgba(255,179,0,0.6);
+    }
+    .video-card:hover .play-btn { transform: translate(-50%,-50%) scale(1.12); background: #D32F2F; color: white; }
+
+    /* Instagram tile */
+    .ig-tile {
+      position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 1/1;
+      cursor: pointer;
+    }
+    .ig-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .ig-tile:hover img { transform: scale(1.1); }
+    .ig-tile .ig-overlay {
+      position: absolute; inset: 0;
+      background: rgba(211,47,47,0.85);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s ease;
+      color: white; font-size: 1.5rem;
+    }
+    .ig-tile:hover .ig-overlay { opacity: 1; }
+
+    .tag-pill {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.25rem 0.6rem; border-radius: 100px;
+    }
+  
+    /* Hero with assets/bg.png (Optimized readability) */
+    .hero-wings { position: relative; overflow: hidden; background-color: #0F0D0B; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.42) 65%, rgba(15, 13, 11, 0.85) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.7) 0%, rgba(15, 13, 11, 0.25) 35%, rgba(15, 13, 11, 0.8) 85%, #FFF8E1 100%);
+      pointer-events: none;
+    }
+    .dark .hero-overlay {
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.45) 65%, rgba(15, 13, 11, 0.88) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.75) 0%, rgba(15, 13, 11, 0.3) 35%, rgba(15, 13, 11, 0.88) 85%, #0F0D0B 100%);
+    }
+
+    .hero-wings .sauce-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 100px; padding: 0.45rem 1rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      transition: all 0.25s;
+    }
+    .hero-wings .sauce-chip i { color: #FFB300; }
+    .hero-wings .sauce-chip:hover {
+      background: #D32F2F; border-color: #D32F2F; color: #FFFFFF;
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211, 47, 47, 0.5);
+    }
+    .hero-wings .sauce-chip:hover i { color: #FFFFFF; }
+
+    /* Responsive typography helpers */
+    .hero-title { font-size: clamp(3rem, 9vw, 7rem); line-height: 0.92; }
+    .hero-sub { font-size: clamp(2.5rem, 6vw, 5rem); }
+
+  
+    /* Hero solid white button with guaranteed dark text in all themes */
+    .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border: 2px solid #FFFFFF !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(211, 47, 47, 0.55);
+    }
+    .dark .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border-color: #FFFFFF !important;
+    }
+    .dark .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+    }
+  
+    /* Critical Hero & Layout Protection (Zero-FOUC & Offline safety) */
+    .hero-wings, .stadium-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-wings > .absolute, .stadium-hero > .absolute {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-wings img, .stadium-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION -->
+  <!-- ============================================= -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-wing-cream/95 dark:bg-[#0F0D0B]/95 backdrop-blur-md border-b border-wing-red/10 dark:border-wing-red/20 shadow-sm transition-all duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24 gap-3">
+
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 rotate-3 group-hover:rotate-0 shrink-0">
+            <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+          </div>
+          <div class="leading-none">
+            <div class="text-xl sm:text-2xl lg:text-3xl font-display text-[#1E1A17] dark:text-[#F5F0E8] tracking-wide">
+              Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span>
+            </div>
+            <div class="text-[7px] sm:text-[8px] lg:text-[9px] uppercase tracking-[0.35em] text-wing-red font-bold mt-0.5 sm:mt-1">Sports Bar &amp; Grill</div>
+          </div>
+        </a>
+
+        <div class="hidden xl:flex items-center gap-4 2xl:gap-6">
+          <div class="dropdown-custom relative py-4">
+            <button class="nav-link flex items-center gap-1">
+              Home <i class="fas fa-chevron-down text-[9px] ms-1"></i>
+            </button>
+            <div class="dropdown-menu-custom">
+              <a href="index.html" class="dropdown-item">Home 1</a>
+              <a href="home2.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="specials.html" class="nav-link">Specials</a>
+          <a href="gallery.html" class="nav-link active">Gallery</a>
+          <a href="our-story.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle RTL / LTR" aria-label="Toggle text direction">
+            <i class="fas fa-right-left text-xs"></i>
+          </button>
+          <button id="theme-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle theme" aria-label="Toggle color theme">
+            <i class="fas fa-moon dark:hidden text-xs"></i>
+            <i class="fas fa-sun hidden dark:inline text-xs"></i>
+          </button>
+          <a href="contact.html" class="hidden xl:inline-flex btn-primary h-10 2xl:h-11 px-5 2xl:px-7 rounded-full items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[11px]"></i> Book a Table
+          </a>
+          <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-full bg-wing-red text-white flex items-center justify-center shadow-md">
+            <i class="fas fa-bars text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu xl:hidden">
+        <div class="py-4 px-2 space-y-1">
+          <div>
+            <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 hover:bg-wing-red/15 rounded-xl text-sm cursor-pointer">
+              <span>Home</span>
+              <i id="home-mobile-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+            <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+              <a href="index.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 1
+              </a>
+              <a href="home2.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 2
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Menu</a>
+          <a href="events.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Events</a>
+          <a href="specials.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Specials</a>
+          <a href="gallery.html" class="block py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 rounded-xl text-sm transition">Gallery</a>
+          <a href="our-story.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">About Us</a>
+          <a href="contact.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Contact</a>
+          <div class="flex flex-col gap-2.5 pt-4 mt-2 border-t border-wing-red/20 dark:border-wing-red/30">
+            <a href="contact.html" class="text-center btn-primary py-3 rounded-full text-xs font-bold">Book a Table</a>
+            <div class="flex gap-2.5">
+              <button id="mobile-theme-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+              </button>
+              <button id="mobile-rtl-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-exchange-alt"></i> RTL
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!-- SECTION 1: GALLERY HERO (HOME 1 STYLE) -->
+  <!-- ============================================= -->
+    <section class="hero-wings min-h-[75vh] flex flex-col justify-center items-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/bg.png" alt="Wings and bar atmosphere" class="w-full h-full object-cover object-center">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full relative z-10 flex flex-col justify-center">
+      <div class="text-center max-w-4xl mx-auto animate-fade-up">
+        <span class="inline-block py-1.5 px-3 sm:px-4 rounded-full bg-wing-red text-white text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-5 sm:mb-6 shadow-xl backdrop-blur-sm border border-white/20">
+          <i class="fas fa-camera me-1.5"></i> Atmosphere &amp; Game Nights
+        </span>
+
+        <h1 class="hero-title font-display text-white mb-4 sm:mb-6 break-safe drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)]">
+          HOT WINGS.<br>
+          <span class="text-[#FF4D4D] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">ELECTRIC</span> <span class="text-wing-amber serif-accent italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">CROWDS.</span><br>
+          <span class="hero-sub tracking-wide text-white/95">EVERY ANGLE. EVERY VIBE.</span>
+        </h1>
+
+        <p class="text-white/90 font-medium text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          From sizzling wing platters and cold pours to cheers under <span class="font-bold text-wing-amber">17 big screens</span> showing every match. Your seat is waiting.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-2">
+          <a href="#gallery-grid" class="btn-primary px-7 sm:px-9 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 w-full sm:w-auto shadow-xl">
+            <i class="fas fa-images"></i> Browse Gallery
+          </a>
+          <a href="contact.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-calendar-alt"></i> Book a Table
+          </a>
+          <a href="events.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-trophy"></i> Game Night Events
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-2 px-2">
+          <a href="#gallery-grid" class="sauce-chip"><i class="fas fa-drumstick-bite"></i> Jumbo Wings</a>
+          <a href="#gallery-grid" class="sauce-chip"><i class="fas fa-tv"></i> 17 Big Screens</a>
+          <a href="#gallery-grid" class="sauce-chip"><i class="fas fa-users"></i> Game Day Crowd</a>
+          <a href="#gallery-grid" class="sauce-chip"><i class="fas fa-beer-mug-empty"></i> Craft Tap Wall</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- SECTION 2: FILTERS + GALLERY GRID -->
+  <!-- ============================================= -->
+  <section id="gallery-grid" class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg scroll-mt-28">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-8 sm:mb-12 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-images text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Browse the Shots</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          EVERY <span class="text-wing-red">ANGLE</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Filter by vibe — food, game nights, the crowd, or the bar itself. Tap any photo to view it full-size.
+        </p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-2.5 mb-8 sm:mb-10 reveal">
+        <button class="filter-tab active" data-filter="all">All Photos</button>
+        <button class="filter-tab" data-filter="food">Food &amp; Wings</button>
+        <button class="filter-tab" data-filter="games">Game Nights</button>
+        <button class="filter-tab" data-filter="crowd">The Crowd</button>
+        <button class="filter-tab" data-filter="bar">The Bar</button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="gallery-grid reveal" id="galleryGrid">
+
+        <!-- 1 - tall - food -->
+        <div class="gallery-item gi-tall col-span-2 sm:col-span-1" data-cat="food" data-title="Buffalo Classic Wings" data-desc="Our #1 best seller — tangy cayenne, butter, garlic.">
+          <img src="assets/buffalo_classic.png" alt="Buffalo classic wings">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-red text-white w-fit mb-1">Food</span>
+            <div class="text-white font-display text-lg leading-tight">Buffalo Classic Wings</div>
+          </div>
+        </div>
+
+        <!-- 2 - short - games -->
+        <div class="gallery-item gi-short" data-cat="games" data-title="NFL Sunday Crowd" data-desc="Every game. Every screen. Every Sunday.">
+          <img src="assets/nfl.png" alt="NFL Sunday crowd">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-amber text-wing-charcoal w-fit mb-1">Game Night</span>
+            <div class="text-white font-display text-lg leading-tight">NFL Sunday Crowd</div>
+          </div>
+        </div>
+
+        <!-- 3 - med - bar -->
+        <div class="gallery-item gi-med" data-cat="bar" data-title="Happy Hour Bar" data-desc="Mon–Fri 3–6 PM. $4 drafts, $5 wells.">
+          <img src="assets/beer_tower_3l.png" alt="Happy hour bar">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-amber text-wing-charcoal w-fit mb-1">The Bar</span>
+            <div class="text-white font-display text-lg leading-tight">Happy Hour Bar</div>
+          </div>
+        </div>
+
+        <!-- 4 - med - crowd -->
+        <div class="gallery-item gi-med" data-cat="crowd" data-title="Trivia Tuesday" data-desc="Teams of 4. $100 bar tab on the line.">
+          <img src="assets/trivia_night_friends.png" alt="Trivia night crowd">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-orange text-white w-fit mb-1">The Crowd</span>
+            <div class="text-white font-display text-lg leading-tight">Trivia Tuesday</div>
+          </div>
+        </div>
+
+        <!-- 5 - short - food -->
+        <div class="gallery-item gi-short" data-cat="food" data-title="Mango Habanero Wings" data-desc="Sweet heat — the fan favorite.">
+          <img src="assets/mango_habanero_wings.png" alt="Mango habanero wings">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-red text-white w-fit mb-1">Food</span>
+            <div class="text-white font-display text-lg leading-tight">Mango Habanero Wings</div>
+          </div>
+        </div>
+
+        <!-- 6 - tall - games -->
+        <div class="gallery-item gi-tall" data-cat="games" data-title="UFC Watch Party" data-desc="Full card on all 17 screens. No cover.">
+          <img src="assets/ufc_watch_party.png" alt="UFC watch party">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-amber text-wing-charcoal w-fit mb-1">Game Night</span>
+            <div class="text-white font-display text-lg leading-tight">UFC Watch Party</div>
+          </div>
+        </div>
+
+        <!-- 7 - med - food -->
+        <div class="gallery-item gi-med" data-cat="food" data-title="Loaded Fries" data-desc="Cheese sauce, bacon, jalapeños, chipotle aioli.">
+          <img src="assets/loaded_fries.png" alt="Loaded fries">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-red text-white w-fit mb-1">Food</span>
+            <div class="text-white font-display text-lg leading-tight">Loaded Fries</div>
+          </div>
+        </div>
+
+        <!-- 8 - short - crowd -->
+        <div class="gallery-item gi-short" data-cat="crowd" data-title="Karaoke Night" data-desc="$0.75 wings after 9, $4 drafts.">
+          <img src="assets/karaoke_night_microphone.png" alt="Karaoke night">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-orange text-white w-fit mb-1">The Crowd</span>
+            <div class="text-white font-display text-lg leading-tight">Karaoke Night</div>
+          </div>
+        </div>
+
+        <!-- 9 - tall - food -->
+        <div class="gallery-item gi-tall" data-cat="food" data-title="Garlic Parmesan Wings" data-desc="Creamy roasted garlic, aged parmesan, fresh herbs.">
+          <img src="assets/garlic_parmesan.png" alt="Garlic parmesan wings">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-red text-white w-fit mb-1">Food</span>
+            <div class="text-white font-display text-lg leading-tight">Garlic Parmesan Wings</div>
+          </div>
+        </div>
+
+        <!-- 10 - short - bar -->
+        <div class="gallery-item gi-short" data-cat="bar" data-title="Craft Draft Pints" data-desc="32 rotating craft taps on draft daily.">
+          <img src="assets/craft_draft_pint.png" alt="Craft draft pint">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-amber text-wing-charcoal w-fit mb-1">The Bar</span>
+            <div class="text-white font-display text-lg leading-tight">Craft Draft Pints</div>
+          </div>
+        </div>
+
+        <!-- 11 - med - crowd -->
+        <div class="gallery-item gi-med" data-cat="crowd" data-title="Reaper Challenge Night" data-desc="Finish 6 wings in 5 minutes. Sign the waiver.">
+          <img src="assets/reaper_challenge.png" alt="Reaper challenge night">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-black text-wing-amber border border-wing-amber/40 w-fit mb-1">The Crowd</span>
+            <div class="text-white font-display text-lg leading-tight">Reaper Challenge</div>
+          </div>
+        </div>
+
+        <!-- 12 - short - games -->
+        <div class="gallery-item gi-short" data-cat="games" data-title="NBA League Pass" data-desc="Every game, every night, every screen.">
+          <img src="assets/nlb.png" alt="NBA basketball game">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-amber text-wing-charcoal w-fit mb-1">Game Night</span>
+            <div class="text-white font-display text-lg leading-tight">NBA League Pass</div>
+          </div>
+        </div>
+
+        <!-- 13 - med - food -->
+        <div class="gallery-item gi-med col-span-2 sm:col-span-1" data-cat="food" data-title="Wing Party Platter" data-desc="30 wings, up to 4 sauces. Built for the table.">
+          <img src="assets/boneless_wings.png" alt="Wing party platter">
+          <div class="zoom-icon"><i class="fas fa-expand text-xs"></i></div>
+          <div class="item-overlay">
+            <span class="tag-pill bg-wing-red text-white w-fit mb-1">Food</span>
+            <div class="text-white font-display text-lg leading-tight">Wing Party Platter</div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center text-wing-ash dark:text-[#B9AFA5] text-[11px] sm:text-xs mt-8 reveal">
+        <i class="fas fa-camera me-1.5 text-wing-red"></i> Tag us <span class="font-bold text-wing-red">@wingdupbar</span> on Instagram for a chance to be featured.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 3: THE STADIUM EXPERIENCE (NO IMAGES) -->
+  <!-- ============================================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-white dark:bg-wing-charcoal relative">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-6"><i class="fas fa-volume-high text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Beyond the Photos</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          THE <span class="text-wing-red">STADIUM</span> EXPERIENCE
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          What the cameras can't capture — the roar of the crowd, the blast of sound when a touchdown hits, and wings fresh from the fryer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+
+        <!-- Card 1 -->
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-red to-wing-red-dark text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-wing-red/25">
+            <i class="fas fa-tv"></i>
+          </div>
+          <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-red mb-2">Visual Tech</span>
+          <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">17 Stadium 4K Screens</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+            Zero blind spots. Every seat and booth is calibrated with a clear sightline to 4K displays and our 150-inch laser projector wall showing simultaneous multi-league feeds.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10">
+            <span class="tag-pill bg-wing-red/10 dark:bg-wing-red/20 text-wing-red">150" Projector</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">4K UHD</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Multi-Game Feeds</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-amber/20 dark:border-wing-amber/30 shadow-md hover:border-wing-amber dark:hover:border-wing-amber hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-amber to-wing-orange text-wing-charcoal flex items-center justify-center text-2xl mb-6 shadow-lg shadow-wing-amber/25">
+            <i class="fas fa-broadcast-tower"></i>
+          </div>
+          <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-orange mb-2">Acoustic Power</span>
+          <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">Stadium Audio Zones</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+            Overhead multi-zone surround sound brings the roar of the arena directly to your table. Switch audio channels for your favorite game or enjoy late-night DJ sets.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-amber/15 dark:border-white/10">
+            <span class="tag-pill bg-wing-amber/15 dark:bg-wing-amber/20 text-wing-orange font-bold">Zone Audio</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Booth Control</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Live DJ Rig</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="experience-card p-7 sm:p-9 rounded-3xl bg-wing-cream/70 dark:bg-wing-smoke/80 border border-wing-red/15 dark:border-wing-red/30 shadow-md hover:border-wing-red dark:hover:border-wing-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col reveal">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-wing-red-dark to-wing-charcoal text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-black/25">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <span class="text-[9px] uppercase tracking-widest font-extrabold text-wing-red mb-2">Weekly Action</span>
+          <h3 class="font-display text-2xl sm:text-3xl text-[#1E1A17] dark:text-[#F5F0E8] mb-3">Game-Night Action</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-6 flex-grow">
+            Every Tuesday 30+ teams battle for bar tabs, Thursday karaoke turns up the volume, and Saturday UFC fight nights pack the floor. There's always a reason to gather.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-wing-red/10 dark:border-white/10">
+            <span class="tag-pill bg-wing-red/10 dark:bg-wing-red/20 text-wing-red">Trivia Tuesdays</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">Reaper Challenge</span>
+            <span class="tag-pill bg-white/80 dark:bg-wing-charcoal text-[#1E1A17] dark:text-[#F5F0E8]">UFC PPVs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 4: COMMUNITY VOICE & SOCIAL (NO IMAGES) -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-6"><i class="fab fa-instagram text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Real Fan Energy</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          @WING'D <span class="text-wing-red">UP</span> COMMUNITY
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Tag <span class="font-bold text-wing-red">@wingdupbar</span> or drop your game-day photos with <span class="font-bold text-wing-red">#WingdUpATX</span>. Here is what fans are saying:
+        </p>
+      </div>
+
+      <!-- Fan Quote Cards (No Images) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 reveal">
+
+        <!-- Review 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red font-bold flex items-center justify-center text-xs">
+                  MJ
+                </div>
+                <div>
+                  <div class="font-bold text-xs sm:text-sm text-[#1E1A17] dark:text-[#F5F0E8]">@marcus_atx</div>
+                  <div class="text-[10px] text-wing-ash dark:text-[#B9AFA5]">Instagram Fan · Austin</div>
+                </div>
+              </div>
+              <div class="text-wing-amber text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#3A332E] dark:text-[#D9CFC4] leading-relaxed mb-4 italic">
+              "Best game day spot in Austin hands down. 17 screens showing every game at once, wings are crispy with legit heat, and the sound zone in the booth makes it feel like an actual stadium."
+            </p>
+          </div>
+          <div class="flex gap-2 text-[10px] text-wing-red font-bold uppercase tracking-wider pt-3 border-t border-wing-red/10 dark:border-white/10">
+            <span>#NFLSundayHQ</span> <span>·</span> <span>#BestWingsATX</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-amber/20 dark:border-wing-amber/30 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-full bg-wing-amber/20 text-wing-orange font-bold flex items-center justify-center text-xs">
+                  SL
+                </div>
+                <div>
+                  <div class="font-bold text-xs sm:text-sm text-[#1E1A17] dark:text-[#F5F0E8]">@sarah_eats_austin</div>
+                  <div class="text-[10px] text-wing-ash dark:text-[#B9AFA5]">Food Creator · Austin</div>
+                </div>
+              </div>
+              <div class="text-wing-amber text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#3A332E] dark:text-[#D9CFC4] leading-relaxed mb-4 italic">
+              "The Mango Habanero wings are unmatched. 100% scratch sauces tossed fresh. Plus Trivia Tuesday with a full flight of local Texas craft beer is now our weekly crew tradition."
+            </p>
+          </div>
+          <div class="flex gap-2 text-[10px] text-wing-orange font-bold uppercase tracking-wider pt-3 border-t border-wing-amber/15 dark:border-white/10">
+            <span>#MangoHabanero</span> <span>·</span> <span>#TriviaTuesday</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red font-bold flex items-center justify-center text-xs">
+                  DR
+                </div>
+                <div>
+                  <div class="font-bold text-xs sm:text-sm text-[#1E1A17] dark:text-[#F5F0E8]">@dave_wing_king</div>
+                  <div class="text-[10px] text-wing-ash dark:text-[#B9AFA5]">Verified Patron · Austin</div>
+                </div>
+              </div>
+              <div class="text-wing-amber text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <p class="text-xs sm:text-sm text-[#3A332E] dark:text-[#D9CFC4] leading-relaxed mb-4 italic">
+              "Survived the Reaper Challenge! 6 wings in 5 minutes. Wall of Fame is real. The staff treated us like royalty and the tap wall had 32 ice-cold beers ready to put out the fire."
+            </p>
+          </div>
+          <div class="flex gap-2 text-[10px] text-wing-red font-bold uppercase tracking-wider pt-3 border-t border-wing-red/10 dark:border-white/10">
+            <span>#ReaperChallenge</span> <span>·</span> <span>#32Taps</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social Hashtags & CTA Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8 reveal">
+        <span class="text-xs font-bold text-wing-ash dark:text-[#B9AFA5] uppercase tracking-wider me-2">Popular Tags:</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/20 text-wing-red font-bold text-xs">#WingdUpATX</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/20 text-[#1E1A17] dark:text-[#F5F0E8] text-xs">#AustinSportsBar</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/20 text-[#1E1A17] dark:text-[#F5F0E8] text-xs">#12SauceChallenge</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/20 text-[#1E1A17] dark:text-[#F5F0E8] text-xs">#GameDayAustin</span>
+      </div>
+
+      <div class="text-center reveal">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn-primary px-7 sm:px-10 py-3.5 sm:py-4 rounded-full inline-flex items-center gap-2 text-xs font-semibold shadow-xl">
+          <i class="fab fa-instagram"></i> Follow @wingdupbar on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA: BOOK A VISIT -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 md:py-24 bg-gradient-to-br from-wing-red to-wing-red-dark relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-white/10"></div>
+    <div class="absolute -bottom-20 -left-20 w-56 sm:w-80 h-56 sm:h-80 rounded-full bg-white/5"></div>
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 text-center relative z-10 reveal">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full mb-5 sm:mb-6">
+        <i class="fas fa-camera text-white text-[10px] sm:text-xs"></i>
+        <span class="text-white text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-semibold">Photos Don't Do It Justice · Come See It Live</span>
+      </div>
+      <h2 class="font-display text-white mb-5 sm:mb-6 leading-none break-safe" style="font-size: clamp(2.5rem, 7vw, 6rem);">
+        SEE IT LIVE. <br class="hidden md:block">
+        <span class="text-wing-amber serif-accent italic" style="font-size: clamp(1.8rem, 5vw, 4rem);">Taste It Too.</span>
+      </h2>
+      <p class="text-white/85 text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-7 sm:mb-10 font-light leading-relaxed px-2">
+        The gallery is just a preview. Book a table and get the full experience — wings, screens, and the crowd.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
+        <a href="contact.html" class="bg-white text-wing-red hover:bg-wing-charcoal hover:text-white px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-2xl inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i> Book a Table
+        </a>
+        <a href="menu.html" class="border-2 border-white text-white hover:bg-white hover:text-wing-red px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 inline-flex items-center justify-center gap-2">
+          <i class="fas fa-utensils"></i> View the Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="bg-wing-charcoal dark:bg-[#090705] text-white pt-14 sm:pt-20 pb-6 sm:pb-8 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none opacity-[0.04] translate-y-1/4">
+      <h2 class="font-display text-[18vw] whitespace-nowrap text-white">WING'D UP</h2>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 mb-10 sm:mb-16">
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <div class="flex items-center gap-3 mb-5 sm:mb-6">
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center rotate-3 shrink-0">
+              <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+            </div>
+            <div class="leading-none">
+              <div class="text-2xl sm:text-3xl font-display text-white">Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span></div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.35em] text-wing-red font-semibold mt-1">Sports Bar &amp; Grill</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-5 sm:mb-6 max-w-sm">
+            Your neighborhood game-day headquarters. House-made sauces, cold beers, and every match on 17 big screens.
+          </p>
+          <div class="flex gap-2.5 sm:gap-3">
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-instagram text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-facebook-f text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-x-twitter text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-youtube text-xs sm:text-sm"></i></a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Explore</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="index.html" class="text-white/60 hover:text-wing-amber transition">Home 1</a></li>
+            <li><a href="home2.html" class="text-white/60 hover:text-wing-amber transition">Home 2</a></li>
+            <li><a href="menu.html" class="text-white/60 hover:text-wing-amber transition">Menu</a></li>
+            <li><a href="events.html" class="text-white/60 hover:text-wing-amber transition">Events</a></li>
+            <li><a href="specials.html" class="text-white/60 hover:text-wing-amber transition">Specials</a></li>
+            <li><a href="gallery.html" class="text-white/60 hover:text-wing-amber transition">Gallery</a></li>
+            <li><a href="our-story.html" class="text-white/60 hover:text-wing-amber transition">About Us</a></li>
+            <li><a href="contact.html" class="text-white/60 hover:text-wing-amber transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Gallery</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="#galleryGrid" class="text-white/60 hover:text-wing-amber transition">All Photos</a></li>
+            <li><a href="#galleryGrid" class="text-white/60 hover:text-wing-amber transition">Food &amp; Wings</a></li>
+            <li><a href="#galleryGrid" class="text-white/60 hover:text-wing-amber transition">Game Nights</a></li>
+            <li><a href="#galleryGrid" class="text-white/60 hover:text-wing-amber transition">The Crowd</a></li>
+            <li><a href="#galleryGrid" class="text-white/60 hover:text-wing-amber transition">The Bar</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Get in Touch</h4>
+          <ul class="space-y-3 sm:space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">1420 Stadium Drive, Unit 3<br>Austin, TX 78704</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-wing-red text-xs"></i>
+              <a href="tel:+15125550142" class="text-white/60 hover:text-wing-amber transition">+1 (512) 555-0142</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-wing-red text-xs"></i>
+              <a href="mailto:hello@wingdupbar.com" class="text-white/60 hover:text-wing-amber transition break-all">hello@wingdupbar.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">Mon–Thu: 11am – 12am<br>Fri–Sat: 11am – 2am<br>Sun: 10am – 11pm (Game Day Brunch)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-5 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+        <p class="text-white/40 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center md:text-left">© 2026 Wing'd Up Sports Bar. All rights reserved. Please drink responsibly.</p>
+        <div class="flex gap-4 sm:gap-6 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/40">
+          <a href="#" class="hover:text-wing-amber transition">Privacy</a>
+          <a href="#" class="hover:text-wing-amber transition">Terms</a>
+          <a href="#" class="hover:text-wing-amber transition">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- LIGHTBOX -->
+  <!-- ============================================= -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Gallery image enlarged">
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle" class="font-display text-xl sm:text-2xl text-white leading-tight"></h3>
+        <p id="lightboxDesc" class="text-white/70 text-xs sm:text-sm mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+      themeBtns.forEach(btn => {
+        btn?.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL / LTR
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+      const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+      if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          if (mobileMenu.classList.contains('open')) {
+            icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        });
+      }
+
+      // Reveal on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // ===============================
+      // FILTER TABS
+      // ===============================
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const filter = tab.getAttribute('data-filter');
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-cat') === filter) {
+              item.style.display = '';
+              // small entrance animation
+              item.style.animation = 'none';
+              void item.offsetWidth;
+              item.style.animation = 'fadeUp 0.5s ease-out forwards';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // ===============================
+      // LIGHTBOX
+      // ===============================
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxDesc = document.getElementById('lightboxDesc');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+
+      let currentIndex = 0;
+      let visibleItems = [];
+
+      function getVisibleItems() {
+        return Array.from(galleryItems).filter(item => item.style.display !== 'none');
+      }
+
+      function openLightbox(index) {
+        visibleItems = getVisibleItems();
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function updateLightbox() {
+        const item = visibleItems[currentIndex];
+        if (!item) return;
+        const img = item.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxTitle.textContent = item.getAttribute('data-title') || img.alt;
+        lightboxDesc.textContent = item.getAttribute('data-desc') || '';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function nextImage() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        updateLightbox();
+      }
+
+      function prevImage() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        updateLightbox();
+      }
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          visibleItems = getVisibleItems();
+          const idx = visibleItems.indexOf(item);
+          if (idx !== -1) openLightbox(idx);
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxNext.addEventListener('click', nextImage);
+      lightboxPrev.addEventListener('click', prevImage);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wing &amp; Sports Bar · Menu · Wings, Sauces &amp; Craft Beer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D32F2F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7v10l10 5 10-5V7l-10-5zM2 7l10 5 10-5M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="description" content="Wing & Sports Bar menu — house-made wings, 12 signature sauces, loaded shareables, burgers, sides, desserts and 32 craft taps. See the full menu and order.">
+
+  <script src="assets/tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'wing-red': '#D32F2F',
+            'wing-red-dark': '#B71C1C',
+            'wing-orange': '#F57C00',
+            'wing-amber': '#FFB300',
+            'wing-cream': '#FFF8E1',
+            'wing-charcoal': '#1E1A17',
+            'wing-dark': '#0F0D0B',
+            'wing-ash': '#6D645C',
+            'wing-smoke': '#2D2824',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.9s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    html.dark { color-scheme: dark; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFF8E1;
+      color: #1E1A17;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #0F0D0B; color: #F5F0E8; }
+    h1, h2, h3, .display-font { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1.05; }
+    .serif-accent { font-family: 'Playfair Display', serif; }
+
+    body::-webkit-scrollbar { width: 8px; }
+    body::-webkit-scrollbar-track { background: #FFF8E1; }
+    body::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 10px; }
+    .dark body::-webkit-scrollbar-track { background: #1E1A17; }
+
+    /* Navbar */
+    .nav-link {
+      position: relative; font-weight: 600; color: #1E1A17; transition: color 0.3s;
+      font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+    }
+    .dark .nav-link { color: #F5F0E8; }
+    .nav-link:hover { color: #D32F2F; }
+    .nav-link.active { color: #D32F2F !important; }
+    .nav-link.active::after {
+      content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+      width: 22px; height: 3px; background: #D32F2F; border-radius: 2px;
+    }
+    .dark .nav-link.active { color: #FF8A65 !important; }
+    .dark .nav-link.active::after { background: #FF8A65; }
+    .dark .nav-link:hover { color: #FF8A65; }
+
+    /* Dropdown */
+    .dropdown-menu-custom {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      min-width: 200px; background: #FFFFFF; border-radius: 16px; padding: 0.5rem 0;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15), 0 4px 10px -4px rgba(0,0,0,0.1);
+      opacity: 0; visibility: hidden; transition: all 0.25s ease; z-index: 1000;
+      border: 1px solid #FFE0B2;
+    }
+    .dark .dropdown-menu-custom { background: #2D2824; border-color: #D32F2F; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5); }
+    .dropdown-custom:hover .dropdown-menu-custom { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .dropdown-item {
+      display: flex; align-items: center; padding: 0.65rem 1.4rem;
+      transition: all 0.2s; color: #1E1A17; font-size: 0.85rem; letter-spacing: 0.02em; font-weight: 500;
+    }
+    .dark .dropdown-item { color: #F5F0E8; }
+    .dropdown-item:hover { background-color: #FFF8E1; color: #B71C1C; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background-color: #D32F2F; color: #FFFFFF !important; padding-left: 1.7rem; }
+    .dropdown-item.active { background-color: #FFE0B2; color: #B71C1C !important; font-weight: 700; }
+    .dark .dropdown-item.active { background-color: #D32F2F; color: #FFFFFF !important; }
+
+    .mobile-menu {
+      background: #FFFFFF; max-height: 0; overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 0 24px 24px;
+    }
+    .dark .mobile-menu { background: #2D2824; }
+    .mobile-menu.open { max-height: 85vh; overflow-y: auto; }
+
+    .btn-primary {
+      background-color: #D32F2F; color: #FFFFFF; font-weight: 700; border-radius: 50px;
+      transition: all 0.3s ease; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5); white-space: nowrap;
+    }
+    .btn-primary:hover {
+      background-color: #B71C1C; transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(211,47,47,0.6);
+    }
+    .btn-outline {
+      border: 2px solid #1E1A17; color: #1E1A17; background: transparent; border-radius: 50px;
+      font-weight: 700; transition: all 0.3s; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { background-color: #1E1A17; color: #FFF8E1; transform: translateY(-2px); }
+    .dark .btn-outline { border-color: #F5F0E8; color: #F5F0E8; }
+    .dark .btn-outline:hover { background-color: #F5F0E8; color: #1E1A17; }
+
+    /* Page hero */
+    .menu-hero { position: relative; overflow: hidden; background-color: #FFF8E1; }
+    .dark .menu-hero { background-color: #0F0D0B; }
+    .menu-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(255, 248, 225, 0.92) 0%, rgba(255, 248, 225, 0.72) 50%, rgba(255, 248, 225, 0.98) 100%);
+      pointer-events: none;
+    }
+    .dark .menu-hero-overlay {
+      background: linear-gradient(180deg, rgba(15, 13, 11, 0.92) 0%, rgba(15, 13, 11, 0.78) 50%, rgba(15, 13, 11, 0.98) 100%);
+    }
+
+    /* Sticky category nav */
+    .category-nav {
+      background: rgba(255, 248, 225, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(211, 47, 47, 0.12);
+      box-shadow: 0 6px 20px -12px rgba(0,0,0,0.15);
+    }
+    .dark .category-nav {
+      background: rgba(15, 13, 11, 0.95);
+      border-bottom-color: rgba(255, 138, 101, 0.2);
+    }
+    .cat-link {
+      padding: 0.55rem 1.1rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;
+      border: 1.5px solid transparent; color: #6D645C; transition: all 0.25s;
+    }
+    @media (min-width: 640px) { .cat-link { padding: 0.65rem 1.4rem; font-size: 0.75rem; } }
+    .dark .cat-link { color: #B9AFA5; }
+    .cat-link:hover { color: #D32F2F; border-color: #D32F2F; }
+    .dark .cat-link:hover { color: #FF8A65; border-color: #FF8A65; }
+    .cat-link.active {
+      background: #D32F2F; border-color: #D32F2F; color: #FFFFFF;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5);
+    }
+
+    /* Menu section headers */
+    .section-title { font-size: clamp(2.2rem, 5.5vw, 4rem); }
+    .section-title-sm { font-size: clamp(1.8rem, 4.5vw, 3rem); }
+    .break-safe { overflow-wrap: anywhere; word-break: break-word; }
+
+    .divider-flame { display: inline-flex; align-items: center; gap: 0.8rem; color: #D32F2F; }
+    .divider-flame::before,
+    .divider-flame::after { content: ''; width: 40px; height: 2px; background: currentColor; opacity: 0.4; border-radius: 2px; }
+
+    /* Menu item card */
+    .menu-item {
+      background: #FFFFFF; border-radius: 22px;
+      border: 1px solid #FFE0B2;
+      transition: all 0.3s ease;
+      display: flex; gap: 1rem; padding: 1rem;
+    }
+    .dark .menu-item { background: #2D2824; border-color: #4E443C; }
+    .menu-item:hover {
+      transform: translateY(-3px);
+      border-color: #D32F2F;
+      box-shadow: 0 20px 40px -18px rgba(211,47,47,0.35);
+    }
+    @media (min-width: 640px) { .menu-item { padding: 1.15rem; gap: 1.15rem; } }
+
+    .menu-thumb {
+      width: 88px; height: 88px; border-radius: 16px; overflow: hidden; flex-shrink: 0;
+      position: relative;
+    }
+    @media (min-width: 640px) { .menu-thumb { width: 108px; height: 108px; border-radius: 18px; } }
+    .menu-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .menu-item:hover .menu-thumb img { transform: scale(1.08); }
+
+    .price-tag {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; line-height: 1;
+      color: #D32F2F;
+    }
+    @media (min-width: 640px) { .price-tag { font-size: 1.6rem; } }
+
+    .tag-pill {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.25rem 0.6rem; border-radius: 100px;
+    }
+
+    /* Heat meter */
+    .heat-meter { display: inline-flex; gap: 2px; }
+    .heat-meter span { width: 6px; height: 6px; border-radius: 2px; background: rgba(0,0,0,0.12); }
+    .dark .heat-meter span { background: rgba(255,255,255,0.15); }
+    .heat-meter span.on { background: #FFB300; }
+    .heat-meter span.on.hot { background: #D32F2F; }
+
+    /* Heat guide cards */
+    .heat-guide {
+      border-radius: 20px; padding: 1.25rem;
+      border: 1px solid #FFE0B2; background: #FFFFFF;
+      transition: all 0.3s ease;
+    }
+    .dark .heat-guide { background: #2D2824; border-color: #4E443C; }
+    .heat-guide:hover { transform: translateY(-4px); border-color: #D32F2F; }
+
+    /* Sauce grid tile */
+    .sauce-tile {
+      position: relative; border-radius: 18px; overflow: hidden; cursor: pointer;
+      transition: all 0.35s ease;
+    }
+    .sauce-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .sauce-tile:hover { transform: translateY(-4px); }
+    .sauce-tile:hover img { transform: scale(1.1); }
+    .sauce-tile .tile-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,13,11,0.92) 0%, rgba(15,13,11,0.15) 60%, transparent 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0.9rem; transition: all 0.4s ease;
+    }
+    .sauce-tile:hover .tile-overlay {
+      background: linear-gradient(to top, rgba(183,28,28,0.95) 0%, rgba(183,28,28,0.4) 60%, transparent 100%);
+    }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(211,47,47,0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.1) 0%, transparent 40%);
+    }
+    .dark .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,138,101,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.08) 0%, transparent 40%);
+    }
+
+    /* Allergen chip */
+    .allergen {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 0.2rem 0.55rem; border-radius: 100px;
+      background: rgba(109,100,92,0.12); color: #6D645C;
+    }
+    .dark .allergen { background: rgba(255,255,255,0.08); color: #B9AFA5; }
+  
+    /* Hero with assets/bg.png (Optimized readability) */
+    .hero-wings { position: relative; overflow: hidden; background-color: #0F0D0B; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.42) 65%, rgba(15, 13, 11, 0.85) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.7) 0%, rgba(15, 13, 11, 0.25) 35%, rgba(15, 13, 11, 0.8) 85%, #FFF8E1 100%);
+      pointer-events: none;
+    }
+    .dark .hero-overlay {
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.45) 65%, rgba(15, 13, 11, 0.88) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.75) 0%, rgba(15, 13, 11, 0.3) 35%, rgba(15, 13, 11, 0.88) 85%, #0F0D0B 100%);
+    }
+
+    .hero-wings .sauce-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 100px; padding: 0.45rem 1rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      transition: all 0.25s;
+    }
+    .hero-wings .sauce-chip i { color: #FFB300; }
+    .hero-wings .sauce-chip:hover {
+      background: #D32F2F; border-color: #D32F2F; color: #FFFFFF;
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211, 47, 47, 0.5);
+    }
+    .hero-wings .sauce-chip:hover i { color: #FFFFFF; }
+
+    /* Responsive typography helpers */
+    .hero-title { font-size: clamp(3rem, 9vw, 7rem); line-height: 0.92; }
+    .hero-sub { font-size: clamp(2.5rem, 6vw, 5rem); }
+
+  
+    /* Hero solid white button with guaranteed dark text in all themes */
+    .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border: 2px solid #FFFFFF !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(211, 47, 47, 0.55);
+    }
+    .dark .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border-color: #FFFFFF !important;
+    }
+    .dark .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+    }
+  
+    /* Critical Hero & Layout Protection (Zero-FOUC & Offline safety) */
+    .hero-wings, .stadium-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-wings > .absolute, .stadium-hero > .absolute {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-wings img, .stadium-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION -->
+  <!-- ============================================= -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-wing-cream/95 dark:bg-[#0F0D0B]/95 backdrop-blur-md border-b border-wing-red/10 dark:border-wing-red/20 shadow-sm transition-all duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24 gap-3">
+
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 rotate-3 group-hover:rotate-0 shrink-0">
+            <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+          </div>
+          <div class="leading-none">
+            <div class="text-xl sm:text-2xl lg:text-3xl font-display text-[#1E1A17] dark:text-[#F5F0E8] tracking-wide">
+              Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span>
+            </div>
+            <div class="text-[7px] sm:text-[8px] lg:text-[9px] uppercase tracking-[0.35em] text-wing-red font-bold mt-0.5 sm:mt-1">Sports Bar &amp; Grill</div>
+          </div>
+        </a>
+
+        <div class="hidden xl:flex items-center gap-4 2xl:gap-6">
+          <div class="dropdown-custom relative py-4">
+            <button class="nav-link flex items-center gap-1">
+              Home <i class="fas fa-chevron-down text-[9px] ms-1"></i>
+            </button>
+            <div class="dropdown-menu-custom">
+              <a href="index.html" class="dropdown-item">Home 1</a>
+              <a href="home2.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="specials.html" class="nav-link">Specials</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="our-story.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle RTL / LTR" aria-label="Toggle text direction">
+            <i class="fas fa-right-left text-xs"></i>
+          </button>
+          <button id="theme-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle theme" aria-label="Toggle color theme">
+            <i class="fas fa-moon dark:hidden text-xs"></i>
+            <i class="fas fa-sun hidden dark:inline text-xs"></i>
+          </button>
+          <a href="contact.html" class="hidden xl:inline-flex btn-primary h-10 2xl:h-11 px-5 2xl:px-7 rounded-full items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[11px]"></i> Book a Table
+          </a>
+          <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-full bg-wing-red text-white flex items-center justify-center shadow-md">
+            <i class="fas fa-bars text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu xl:hidden">
+        <div class="py-4 px-2 space-y-1">
+          <div>
+            <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 hover:bg-wing-red/15 rounded-xl text-sm cursor-pointer">
+              <span>Home</span>
+              <i id="home-mobile-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+            <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+              <a href="index.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 1
+              </a>
+              <a href="home2.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 2
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="block py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 rounded-xl text-sm transition">Menu</a>
+          <a href="events.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Events</a>
+          <a href="specials.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Specials</a>
+          <a href="gallery.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Gallery</a>
+          <a href="our-story.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">About Us</a>
+          <a href="contact.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Contact</a>
+          <div class="flex flex-col gap-2.5 pt-4 mt-2 border-t border-wing-red/20 dark:border-wing-red/30">
+            <a href="contact.html" class="text-center btn-primary py-3 rounded-full text-xs font-bold">Book a Table</a>
+            <div class="flex gap-2.5">
+              <button id="mobile-theme-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+              </button>
+              <button id="mobile-rtl-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-exchange-alt"></i> RTL
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!-- MENU HERO (HOME 1 STYLE) -->
+  <!-- ============================================= -->
+    <section class="hero-wings min-h-[75vh] flex flex-col justify-center items-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/bg.png" alt="Wings and craft beer menu spread" class="w-full h-full object-cover object-center">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full relative z-10 flex flex-col justify-center">
+      <div class="text-center max-w-4xl mx-auto animate-fade-up">
+        <span class="inline-block py-1.5 px-3 sm:px-4 rounded-full bg-wing-red text-white text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-5 sm:mb-6 shadow-xl backdrop-blur-sm border border-white/20">
+          <i class="fas fa-fire me-1.5"></i> House-Crafted &amp; Tossed Fresh
+        </span>
+
+        <h1 class="hero-title font-display text-white mb-4 sm:mb-6 break-safe drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)]">
+          JUMBO WINGS.<br>
+          <span class="text-[#FF4D4D] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">HOUSE-MADE</span> <span class="text-wing-amber serif-accent italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">SAUCES.</span><br>
+          <span class="hero-sub tracking-wide text-white/95">32 CRAFT TAPS. FRESH DAILY.</span>
+        </h1>
+
+        <p class="text-white/90 font-medium text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Twelve house-made sauces, fall-off-the-bone wings, and <span class="font-bold text-wing-amber">17 big screens</span> showing every match. Your seat is waiting.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-2">
+          <a href="#wings" class="btn-primary px-7 sm:px-9 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 w-full sm:w-auto shadow-xl">
+            <i class="fas fa-utensils"></i> Explore the Menu
+          </a>
+          <a href="contact.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-calendar-alt"></i> Book a Table
+          </a>
+          <a href="events.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-trophy"></i> Game Night Events
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-2 px-2">
+          <a href="#wings" class="sauce-chip"><i class="fas fa-drumstick-bite"></i> Jumbo Wings</a>
+          <a href="#sauces" class="sauce-chip"><i class="fas fa-pepper-hot"></i> 12 Signature Sauces</a>
+          <a href="#shareables" class="sauce-chip"><i class="fas fa-cheese"></i> Loaded Shareables</a>
+          <a href="#burgers" class="sauce-chip"><i class="fas fa-burger"></i> Stacked Burgers</a>
+          <a href="#drinks" class="sauce-chip"><i class="fas fa-beer-mug-empty"></i> 32 Craft Taps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- STICKY CATEGORY NAV -->
+  <!-- ============================================= -->
+  <div class="category-nav sticky top-16 sm:top-20 lg:top-24 z-40">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div class="flex items-center gap-2 overflow-x-auto py-3 sm:py-4" style="scrollbar-width:none;">
+        <a href="#wings" class="cat-link active" data-cat="wings">Wings</a>
+        <a href="#sauces" class="cat-link" data-cat="sauces">Sauces</a>
+        <a href="#shareables" class="cat-link" data-cat="shareables">Shareables</a>
+        <a href="#burgers" class="cat-link" data-cat="burgers">Burgers &amp; Sandwiches</a>
+        <a href="#sides" class="cat-link" data-cat="sides">Sides</a>
+        <a href="#desserts" class="cat-link" data-cat="desserts">Desserts</a>
+        <a href="#drinks" class="cat-link" data-cat="drinks">Beer &amp; Drinks</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- SECTION: WINGS -->
+  <!-- ============================================= -->
+  <section id="wings" class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-drumstick-bite text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">The Main Event</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          JUMBO <span class="text-wing-red">WINGS</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Every order is tossed to order in your choice of 12 house-made sauces. Bone-in or boneless. Celery, carrots, and blue cheese included.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 max-w-6xl mx-auto">
+
+        <!-- Classic Wings -->
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/classic_wings.png" alt="Classic buffalo wings">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-amber text-wing-charcoal">Best Seller</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Classic Wings</h3>
+              <span class="price-tag shrink-0">$14.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">6 jumbo wings, any sauce. Celery, carrots, blue cheese. Add fries for $3.99.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mango Habanero -->
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/mango_habanero_wings.png" alt="Mango habanero wings">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-red text-white">Fan Favorite</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Mango Habanero Wings</h3>
+              <span class="price-tag shrink-0">$16.49</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">8 wings tossed in our signature sweet-heat sauce. Celery, carrots, blue cheese.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <div class="heat-meter"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span></span><span></span></div>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garlic Parmesan -->
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/garlic_parmesan_wings.png" alt="Garlic parmesan wings">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Garlic Parmesan Wings</h3>
+              <span class="price-tag shrink-0">$15.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">8 wings in a creamy roasted garlic and aged parmesan sauce. Fresh herbs.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reaper Challenge -->
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/reaper_challenge_wings (1).png" alt="Reaper challenge wings">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-black text-wing-amber border border-wing-amber/40">Extreme</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Reaper Challenge</h3>
+              <span class="price-tag shrink-0">$18.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">6 wings in Carolina Reaper + ghost pepper. Finish in 5 min — free meal + tee. Waiver required.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <div class="heat-meter"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span></div>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boneless -->
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/boneless_wings.png" alt="Boneless wings">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Boneless Wings</h3>
+              <span class="price-tag shrink-0">$13.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">8 breaded chicken bites, any sauce. Celery, carrots, blue cheese.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wing Party Platter -->
+        <div class="menu-item reveal !bg-wing-charcoal dark:!bg-[#1A1512] !border-wing-amber/50">
+          <div class="menu-thumb">
+            <img src="assets/win.png" alt="Wing party platter">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-amber text-wing-charcoal">Party</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-white leading-tight">Wing Party Platter</h3>
+              <span class="price-tag shrink-0 !text-wing-amber">$49.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-white/70 leading-relaxed mb-2 flex-grow">30 wings, up to 4 sauces. 2 large fries + 4 dips. Perfect for game night.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen !bg-white/10 !text-white/70"><i class="fas fa-users text-[8px]"></i> Serves 4-6</span>
+              <a href="contact.html" class="text-wing-amber text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-white transition">Book <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: SAUCE WALL -->
+  <!-- ============================================= -->
+  <section id="sauces" class="py-14 sm:py-20 bg-white dark:bg-wing-charcoal relative scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-fire text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">House-Made Daily</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          THE <span class="text-wing-red">SAUCE</span> WALL
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Twelve sauces, from mild to melt-your-face. Every wing is tossed to order — never sitting under a lamp.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto">
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/buffalo_classic.png" alt="Buffalo classic sauce">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Buffalo Classic</h3>
+            <div class="heat-meter mt-1.5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/mango_habanero.png" alt="Mango habanero sauce">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Mango Habanero</h3>
+            <div class="heat-meter mt-1.5"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/garlic_parmesan.png" alt="Garlic parmesan sauce">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Garlic Parmesan</h3>
+            <div class="heat-meter mt-1.5"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/honey_bbq.png" alt="Honey BBQ sauce">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Honey BBQ</h3>
+            <div class="heat-meter mt-1.5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/reaper_challenge.png" alt="Reaper challenge sauce">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Reaper Challenge</h3>
+            <div class="heat-meter mt-1.5"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/lemon_pepper_dry_rub.png" alt="Lemon pepper dry rub">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Lemon Pepper Dry Rub</h3>
+            <div class="heat-meter mt-1.5"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/korean_gochujang.png" alt="Korean gochujang wings">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Korean Gochujang</h3>
+            <div class="heat-meter mt-1.5"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span></span></div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="sauce-tile h-40 sm:h-48 reveal">
+          <img src="assets/smoky_chipotle_bbq.png" alt="Smoky chipotle BBQ wings">
+          <div class="tile-overlay">
+            <h3 class="font-display text-lg sm:text-xl text-white leading-tight">Smoky Chipotle BBQ</h3>
+            <div class="heat-meter mt-1.5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div>
+          </div>
+        </a>
+      </div>
+
+      <p class="text-center text-wing-ash dark:text-[#B9AFA5] text-[11px] sm:text-xs mt-6 reveal">
+        <i class="fas fa-circle-info me-1.5 text-wing-red"></i> Ask your server for the full sauce list — 4 more rotating seasonal sauces available.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: SHAREABLES -->
+  <!-- ============================================= -->
+  <section id="shareables" class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-share-nodes text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Built for the Table</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          SHAREABLES &amp; <span class="text-wing-red">STARTERS</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Loaded, fried, and built to share. Order two — you'll want them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 max-w-6xl mx-auto">
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/loaded_fries.png" alt="Loaded fries">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-amber text-wing-charcoal">Best Seller</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Loaded Fries</h3>
+              <span class="price-tag shrink-0">$9.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Cheese sauce, bacon, jalapeños, chipotle aioli. Add chili or chicken for $2.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/loaded_nachos.png" alt="Loaded nachos">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Loaded Nachos</h3>
+              <span class="price-tag shrink-0">$11.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Tortilla chips, queso, black beans, pico, jalapeños, crema. Add chicken $3.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/pretzel_bites.png" alt="Pretzel bites">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Pretzel Bites</h3>
+              <span class="price-tag shrink-0">$8.49</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Warm salted pretzel bites with house beer cheese and honey mustard.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten · Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/crispy_tenders.png" alt="Crispy chicken tenders">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Crispy Tenders</h3>
+              <span class="price-tag shrink-0">$10.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">5 hand-breaded chicken tenders, choose any sauce or dry rub, 1 dip.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/mac_cheese_bites.png" alt="Mac and cheese bites">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Mac &amp; Cheese Bites</h3>
+              <span class="price-tag shrink-0">$8.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">6 crispy fried mac &amp; cheese bites with chipotle ranch for dipping.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy · Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/beer_battered_onion_rings.png" alt="Onion rings">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Beer-Battered Onion Rings</h3>
+              <span class="price-tag shrink-0">$7.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Thick-cut onion rings in crispy beer batter with house comeback sauce.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: BURGERS & SANDWICHES -->
+  <!-- ============================================= -->
+  <section id="burgers" class="py-14 sm:py-20 bg-white dark:bg-wing-charcoal relative scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-burger text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Handhelds</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          BURGERS &amp; <span class="text-wing-red">SANDWICHES</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Stacked tall, served with hand-cut fries. All patties are fresh, never frozen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 max-w-6xl mx-auto">
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/wingd_up_burger.png" alt="Wing'd Up burger">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-red text-white">Signature</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Wing'd Up Burger</h3>
+              <span class="price-tag shrink-0">$15.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Double smash patty, aged cheddar, bacon, house sauce, brioche bun. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten · Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/classic_cheeseburger.png" alt="Classic cheeseburger">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Classic Cheeseburger</h3>
+              <span class="price-tag shrink-0">$13.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">1/2 lb beef patty, American cheese, lettuce, tomato, onion, pickles, house sauce. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten · Dairy</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/nashville_hot_chicken_sandwich.png" alt="Nashville hot chicken sandwich">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Nashville Hot Chicken Sandwich</h3>
+              <span class="price-tag shrink-0">$14.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Crispy thigh glazed in cayenne-honey, slaw, pickles, brioche. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <div class="heat-meter"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span></span><span></span></div>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/classic_cheeseburger.png" alt="Crispy buffalo chicken sandwich">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Buffalo Chicken Sandwich</h3>
+              <span class="price-tag shrink-0">$13.49</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Crispy chicken tossed in Buffalo sauce, blue cheese slaw, lettuce, brioche. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy · Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/jalapeno_smash_burger.png" alt="Smash burger with jalapenos">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Jalapeño Smash Burger</h3>
+              <span class="price-tag shrink-0">$14.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Double patty, pepper jack, bacon, fried jalapeños, chipotle mayo. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <div class="heat-meter"><span class="on hot"></span><span class="on hot"></span><span></span><span></span><span></span></div>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/smoked_pulled_pork_sandwich.png" alt="Pulled pork sandwich">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Smoked Pulled Pork Sandwich</h3>
+              <span class="price-tag shrink-0">$13.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">12-hour smoked pork, honey BBQ, pickled slaw, brioche. Fries included.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: SIDES -->
+  <!-- ============================================= -->
+  <section id="sides" class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-bowl-food text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">On the Side</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          SIDES &amp; <span class="text-wing-red">EXTRAS</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto">
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/hand_cut_fries.png" alt="Hand-cut fries">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Hand-Cut Fries</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$4.99</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Sea salt, house ketchup.</p>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/sweet_potato_fries.png" alt="Sweet potato fries">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Sweet Potato Fries</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$5.49</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Cinnamon-sugar dust, chipotle aioli.</p>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/mac_and_cheese.png" alt="Mac and cheese">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Mac &amp; Cheese</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$6.49</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Three-cheese blend, toasted breadcrumb.</p>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/house_slaw.png" alt="House slaw">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">House Slaw</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$4.49</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Creamy, tangy, freshly shredded daily.</p>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/side_salad.png" alt="Side salad">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Side Salad</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$5.49</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Mixed greens, tomato, cucumber, house dressing.</p>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb !w-16 !h-16 sm:!w-20 sm:!h-20">
+            <img src="assets/extra_dips.png" alt="Extra dips">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Extra Dips</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$0.99</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Blue cheese, ranch, chipotle aioli, honey mustard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: DESSERTS -->
+  <!-- ============================================= -->
+  <section id="desserts" class="py-14 sm:py-20 bg-white dark:bg-wing-charcoal relative scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-ice-cream text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Save Room</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          SWEET <span class="text-wing-red">FINISH</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto">
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/chocolate_lava_cake.png" alt="Chocolate lava cake">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Chocolate Lava Cake</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$7.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Warm molten center, vanilla ice cream, sea salt caramel.</p>
+            <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy · Gluten</span>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/new_york_cheesecake.png" alt="Cheesecake slice">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">New York Cheesecake</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$7.49</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Classic creamy cheesecake, graham crust, berry compote.</p>
+            <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy · Gluten</span>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/loaded_sundae.png" alt="Ice cream sundae">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Loaded Sundae</h3>
+              <span class="price-tag !text-lg sm:!text-xl shrink-0">$6.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Vanilla ice cream, brownie bites, hot fudge, whipped cream, cherry.</p>
+            <span class="allergen"><i class="fas fa-cheese text-[8px]"></i> Dairy · Gluten</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: BEER & DRINKS -->
+  <!-- ============================================= -->
+  <section id="drinks" class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg scroll-mt-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-beer-mug-empty text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">32 Taps · Full Bar</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          BEER &amp; <span class="text-wing-red">DRINKS</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          32 rotating craft taps, local brews, imports, cocktails, and game-day specials. Ask your server for today's tap list.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 max-w-6xl mx-auto">
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/draft_beer_flight.png" alt="Draft beer flight">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-amber text-wing-charcoal">Best Value</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Draft Beer Flight</h3>
+              <span class="price-tag shrink-0">$12.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Four 5oz pours — pick any four taps. Perfect for game night.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/craft_draft_pint.png" alt="Craft draft pint">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Craft Draft Pint</h3>
+              <span class="price-tag shrink-0">$6.50</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">16oz pour from any of our 32 rotating taps. Local, import, and seasonal.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-wheat-awn text-[8px]"></i> Gluten</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/house_margarita.png" alt="Margarita cocktail">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">House Margarita</h3>
+              <span class="price-tag shrink-0">$9.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Blanco tequila, fresh lime, agave, salted rim. Frozen or on the rocks.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen">21+</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/smoked_old_fashioned.png" alt="Old fashioned cocktail">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Smoked Old Fashioned</h3>
+              <span class="price-tag shrink-0">$11.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">Bourbon, bitters, orange peel, smoked cherry. Stirred tableside.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen">21+</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/craft_soda_lemonade.png" alt="Craft soda">
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Craft Soda &amp; Lemonade</h3>
+              <span class="price-tag shrink-0">$3.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">House-made lemonade, sweet tea, or craft root beer. Free refills.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen">Non-alcoholic</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item reveal">
+          <div class="menu-thumb">
+            <img src="assets/beer_tower_3l.png" alt="Beer tower">
+            <span class="absolute top-1.5 left-1.5 tag-pill bg-wing-red text-white">Party</span>
+          </div>
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] leading-tight">Beer Tower (3L)</h3>
+              <span class="price-tag shrink-0">$29.99</span>
+            </div>
+            <p class="text-[11px] sm:text-xs md:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed mb-2 flex-grow">3 liters of any draft beer. Built for the table — and the big game.</p>
+            <div class="flex items-center justify-between gap-2 mt-auto">
+              <span class="allergen"><i class="fas fa-users text-[8px]"></i> Serves 4-6</span>
+              <a href="contact.html" class="text-wing-red text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:text-wing-orange transition">Order <i class="fas fa-arrow-right ms-1 text-[9px]"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- HEAT GUIDE -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 bg-white dark:bg-wing-charcoal relative">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-5"><i class="fas fa-pepper-hot text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Know Your Heat</span>
+        <h2 class="section-title-sm font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 break-safe">
+          HEAT <span class="text-wing-red">GUIDE</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div class="heat-guide reveal text-center">
+          <div class="text-3xl mb-2">🌿</div>
+          <h3 class="font-display text-lg text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Mild</h3>
+          <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5]">Garlic Parm, Honey BBQ, Lemon Pepper</p>
+          <div class="heat-meter justify-center mt-2"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="heat-guide reveal text-center">
+          <div class="text-3xl mb-2">🔥</div>
+          <h3 class="font-display text-lg text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Medium</h3>
+          <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5]">Buffalo Classic, Chipotle BBQ</p>
+          <div class="heat-meter justify-center mt-2"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="heat-guide reveal text-center">
+          <div class="text-3xl mb-2">🌶️</div>
+          <h3 class="font-display text-lg text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Hot</h3>
+          <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5]">Mango Habanero, Korean Gochujang</p>
+          <div class="heat-meter justify-center mt-2"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span></span><span></span></div>
+        </div>
+        <div class="heat-guide reveal text-center">
+          <div class="text-3xl mb-2">💀</div>
+          <h3 class="font-display text-lg text-[#1E1A17] dark:text-[#F5F0E8] mb-1">Extreme</h3>
+          <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5]">Reaper Challenge — waiver required</p>
+          <div class="heat-meter justify-center mt-2"><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span><span class="on hot"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- ALLERGEN NOTE -->
+  <!-- ============================================= -->
+  <section class="pb-14 sm:pb-20 bg-wing-cream dark:bg-wing-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div class="bg-white dark:bg-wing-smoke rounded-2xl border border-wing-amber/40 p-5 sm:p-6 text-center reveal">
+        <i class="fas fa-triangle-exclamation text-wing-amber text-xl mb-2"></i>
+        <h3 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Allergen Notice</h3>
+        <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed max-w-2xl mx-auto">
+          Our kitchen handles wheat, dairy, eggs, soy, peanuts, tree nuts, fish, and shellfish. We cannot guarantee zero cross-contamination. Please inform your server of any allergies before ordering. Full allergen guide available at the host stand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA: ORDER / RESERVE -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 md:py-24 bg-gradient-to-br from-wing-red to-wing-red-dark relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-white/10"></div>
+    <div class="absolute -bottom-20 -left-20 w-56 sm:w-80 h-56 sm:h-80 rounded-full bg-white/5"></div>
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 text-center relative z-10 reveal">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full mb-5 sm:mb-6">
+        <i class="fas fa-clock text-white text-[10px] sm:text-xs"></i>
+        <span class="text-white text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-semibold">Kitchen Open Late · Dine-In &amp; Takeout</span>
+      </div>
+      <h2 class="font-display text-white mb-5 sm:mb-6 leading-none break-safe" style="font-size: clamp(2.5rem, 7vw, 6rem);">
+        HUNGRY YET? <br class="hidden md:block">
+        <span class="text-wing-amber serif-accent italic" style="font-size: clamp(1.8rem, 5vw, 4rem);">Order Up.</span>
+      </h2>
+      <p class="text-white/85 text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-7 sm:mb-10 font-light leading-relaxed px-2">
+        Book a table, call ahead for takeout, or just walk in. Kitchen's open late — and the wings are always fresh.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
+        <a href="contact.html" class="bg-white text-wing-red hover:bg-wing-charcoal hover:text-white px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-2xl inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i> Book a Table
+        </a>
+        <a href="tel:+15125550142" class="border-2 border-white text-white hover:bg-white hover:text-wing-red px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 inline-flex items-center justify-center gap-2">
+          <i class="fas fa-phone"></i> Call to Order
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="bg-wing-charcoal dark:bg-[#090705] text-white pt-14 sm:pt-20 pb-6 sm:pb-8 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none opacity-[0.04] translate-y-1/4">
+      <h2 class="font-display text-[18vw] whitespace-nowrap text-white">WING'D UP</h2>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 mb-10 sm:mb-16">
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <div class="flex items-center gap-3 mb-5 sm:mb-6">
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center rotate-3 shrink-0">
+              <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+            </div>
+            <div class="leading-none">
+              <div class="text-2xl sm:text-3xl font-display text-white">Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span></div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.35em] text-wing-red font-semibold mt-1">Sports Bar &amp; Grill</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-5 sm:mb-6 max-w-sm">
+            Your neighborhood game-day headquarters. House-made sauces, cold beers, and every match on 17 big screens.
+          </p>
+          <div class="flex gap-2.5 sm:gap-3">
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-instagram text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-facebook-f text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-x-twitter text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-youtube text-xs sm:text-sm"></i></a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Explore</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="index.html" class="text-white/60 hover:text-wing-amber transition">Home 1</a></li>
+            <li><a href="home2.html" class="text-white/60 hover:text-wing-amber transition">Home 2</a></li>
+            <li><a href="menu.html" class="text-white/60 hover:text-wing-amber transition">Menu</a></li>
+            <li><a href="events.html" class="text-white/60 hover:text-wing-amber transition">Events</a></li>
+            <li><a href="specials.html" class="text-white/60 hover:text-wing-amber transition">Specials</a></li>
+            <li><a href="gallery.html" class="text-white/60 hover:text-wing-amber transition">Gallery</a></li>
+            <li><a href="our-story.html" class="text-white/60 hover:text-wing-amber transition">About Us</a></li>
+            <li><a href="contact.html" class="text-white/60 hover:text-wing-amber transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Menu</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="#wings" class="text-white/60 hover:text-wing-amber transition">Wings</a></li>
+            <li><a href="#sauces" class="text-white/60 hover:text-wing-amber transition">Sauces</a></li>
+            <li><a href="#shareables" class="text-white/60 hover:text-wing-amber transition">Shareables</a></li>
+            <li><a href="#burgers" class="text-white/60 hover:text-wing-amber transition">Burgers</a></li>
+            <li><a href="#drinks" class="text-white/60 hover:text-wing-amber transition">Beer &amp; Drinks</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Get in Touch</h4>
+          <ul class="space-y-3 sm:space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">1420 Stadium Drive, Unit 3<br>Austin, TX 78704</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-wing-red text-xs"></i>
+              <a href="tel:+15125550142" class="text-white/60 hover:text-wing-amber transition">+1 (512) 555-0142</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-wing-red text-xs"></i>
+              <a href="mailto:hello@wingdupbar.com" class="text-white/60 hover:text-wing-amber transition break-all">hello@wingdupbar.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">Mon–Thu: 11am – 12am<br>Fri–Sat: 11am – 2am<br>Sun: 10am – 11pm (Game Day Brunch)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-5 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+        <p class="text-white/40 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center md:text-left">© 2026 Wing'd Up Sports Bar. All rights reserved. Please drink responsibly.</p>
+        <div class="flex gap-4 sm:gap-6 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/40">
+          <a href="#" class="hover:text-wing-amber transition">Privacy</a>
+          <a href="#" class="hover:text-wing-amber transition">Terms</a>
+          <a href="#" class="hover:text-wing-amber transition">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+      themeBtns.forEach(btn => {
+        btn?.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL / LTR
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+      const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+      if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          if (mobileMenu.classList.contains('open')) {
+            icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        });
+      }
+
+      // Reveal on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // Sticky category nav active state
+      const catLinks = document.querySelectorAll('.cat-link');
+      const sections = document.querySelectorAll('section[id]');
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            catLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('data-cat') === id);
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(s => navObserver.observe(s));
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wing &amp; Sports Bar · About Us · Sauce, Sports &amp; Community</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D32F2F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7v10l10 5 10-5V7l-10-5zM2 7l10 5 10-5M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="description" content="Wing & Sports Bar — About Us. From a small kitchen in 2016 to Austin's game-day headquarters. House-made sauces, community roots, and 17 screens.">
+
+  <script src="assets/tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'wing-red': '#D32F2F',
+            'wing-red-dark': '#B71C1C',
+            'wing-orange': '#F57C00',
+            'wing-amber': '#FFB300',
+            'wing-cream': '#FFF8E1',
+            'wing-charcoal': '#1E1A17',
+            'wing-dark': '#0F0D0B',
+            'wing-ash': '#6D645C',
+            'wing-smoke': '#2D2824',
+            'stadium-dark': '#0A0A0A',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.9s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    html.dark { color-scheme: dark; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFF8E1;
+      color: #1E1A17;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #0F0D0B; color: #F5F0E8; }
+    h1, h2, h3, .display-font { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1.05; }
+    .serif-accent { font-family: 'Playfair Display', serif; }
+
+    body::-webkit-scrollbar { width: 8px; }
+    body::-webkit-scrollbar-track { background: #FFF8E1; }
+    body::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 10px; }
+    .dark body::-webkit-scrollbar-track { background: #1E1A17; }
+
+    /* Navbar */
+    .nav-link {
+      position: relative; font-weight: 600; color: #1E1A17; transition: color 0.3s;
+      font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+    }
+    .dark .nav-link { color: #F5F0E8; }
+    .nav-link:hover { color: #D32F2F; }
+    .nav-link.active { color: #D32F2F !important; }
+    .nav-link.active::after {
+      content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+      width: 22px; height: 3px; background: #D32F2F; border-radius: 2px;
+    }
+    .dark .nav-link.active { color: #FF8A65 !important; }
+    .dark .nav-link.active::after { background: #FF8A65; }
+    .dark .nav-link:hover { color: #FF8A65; }
+
+    /* Dropdown */
+    .dropdown-menu-custom {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      min-width: 200px; background: #FFFFFF; border-radius: 16px; padding: 0.5rem 0;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15), 0 4px 10px -4px rgba(0,0,0,0.1);
+      opacity: 0; visibility: hidden; transition: all 0.25s ease; z-index: 1000;
+      border: 1px solid #FFE0B2;
+    }
+    .dark .dropdown-menu-custom { background: #2D2824; border-color: #D32F2F; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5); }
+    .dropdown-custom:hover .dropdown-menu-custom { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .dropdown-item {
+      display: flex; align-items: center; padding: 0.65rem 1.4rem;
+      transition: all 0.2s; color: #1E1A17; font-size: 0.85rem; letter-spacing: 0.02em; font-weight: 500;
+    }
+    .dark .dropdown-item { color: #F5F0E8; }
+    .dropdown-item:hover { background-color: #FFF8E1; color: #B71C1C; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background-color: #D32F2F; color: #FFFFFF !important; padding-left: 1.7rem; }
+    .dropdown-item.active { background-color: #FFE0B2; color: #B71C1C !important; font-weight: 700; }
+    .dark .dropdown-item.active { background-color: #D32F2F; color: #FFFFFF !important; }
+
+    .mobile-menu {
+      background: #FFFFFF; max-height: 0; overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 0 24px 24px;
+    }
+    .dark .mobile-menu { background: #2D2824; }
+    .mobile-menu.open { max-height: 85vh; overflow-y: auto; }
+
+    .btn-primary {
+      background-color: #D32F2F; color: #FFFFFF; font-weight: 700; border-radius: 50px;
+      transition: all 0.3s ease; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5); white-space: nowrap;
+    }
+    .btn-primary:hover {
+      background-color: #B71C1C; transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(211,47,47,0.6);
+    }
+    .btn-outline {
+      border: 2px solid #1E1A17; color: #1E1A17; background: transparent; border-radius: 50px;
+      font-weight: 700; transition: all 0.3s; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { background-color: #1E1A17; color: #FFF8E1; transform: translateY(-2px); }
+    .dark .btn-outline { border-color: #F5F0E8; color: #F5F0E8; }
+    .dark .btn-outline:hover { background-color: #F5F0E8; color: #1E1A17; }
+
+    /* Story hero */
+    .story-hero { position: relative; overflow: hidden; background: #0A0A0A; }
+    /* story hero handled via inline img */
+    .story-hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(255,179,0,0.15) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.6) 45%, rgba(10,10,10,0.97) 100%);
+    }
+
+    .divider-flame { display: inline-flex; align-items: center; gap: 0.8rem; color: #D32F2F; }
+    .divider-flame::before,
+    .divider-flame::after { content: ''; width: 40px; height: 2px; background: currentColor; opacity: 0.4; border-radius: 2px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(211,47,47,0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.1) 0%, transparent 40%);
+    }
+    .dark .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,138,101,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.08) 0%, transparent 40%);
+    }
+
+    .section-title { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+    .section-title-sm { font-size: clamp(2rem, 5vw, 3.5rem); }
+    .break-safe { overflow-wrap: anywhere; word-break: break-word; }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    @media (min-width: 768px) {
+      .timeline { padding-left: 0; }
+      .timeline::before {
+        content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+        background: linear-gradient(to bottom, transparent, #D32F2F 10%, #FFB300 90%, transparent);
+        transform: translateX(-50%);
+      }
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 2rem;
+    }
+    @media (min-width: 768px) {
+      .timeline-item {
+        width: 50%; padding-right: 3rem; text-align: right;
+      }
+      .timeline-item:nth-child(even) {
+        margin-left: 50%; padding-right: 0; padding-left: 3rem; text-align: left;
+      }
+      .timeline-dot {
+        position: absolute; right: -8px; top: 8px;
+        width: 16px; height: 16px; border-radius: 50%;
+        background: #D32F2F; border: 3px solid #FFF8E1;
+        box-shadow: 0 0 0 3px rgba(211,47,47,0.2);
+      }
+      .dark .timeline-dot { border-color: #0F0D0B; }
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: -8px; right: auto;
+      }
+    }
+    @media (max-width: 767px) {
+      .timeline::before {
+        content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+        background: linear-gradient(to bottom, transparent, #D32F2F 10%, #FFB300 90%, transparent);
+      }
+      .timeline-dot {
+        position: absolute; left: -2rem; top: 8px;
+        width: 14px; height: 14px; border-radius: 50%;
+        background: #D32F2F; border: 3px solid #FFF8E1;
+        box-shadow: 0 0 0 3px rgba(211,47,47,0.2);
+      }
+      .dark .timeline-dot { border-color: #0F0D0B; }
+    }
+
+    .year-badge {
+      display: inline-flex; align-items: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; line-height: 1;
+      color: #D32F2F; margin-bottom: 0.5rem;
+    }
+
+    /* Value card */
+    .value-card {
+      border-radius: 24px; padding: 1.75rem;
+      border: 1px solid #FFE0B2; background: #FFFFFF;
+      transition: all 0.35s ease; height: 100%;
+      display: flex; flex-direction: column;
+    }
+    .dark .value-card { background: #2D2824; border-color: #4E443C; }
+    .value-card:hover { transform: translateY(-6px); border-color: #D32F2F; box-shadow: 0 25px 50px -18px rgba(211,47,47,0.35); }
+
+    .value-icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+
+    /* Team card */
+    .team-card {
+      border-radius: 24px; overflow: hidden; background: #FFFFFF;
+      border: 1px solid #FFE0B2; transition: all 0.35s ease;
+    }
+    .dark .team-card { background: #2D2824; border-color: #4E443C; }
+    .team-card:hover { transform: translateY(-6px); border-color: #D32F2F; box-shadow: 0 25px 50px -18px rgba(211,47,47,0.35); }
+    .team-card img { transition: transform 0.6s ease; }
+    .team-card:hover img { transform: scale(1.06); }
+
+    /* Stat block */
+    .stat-block {
+      text-align: center; padding: 1.25rem 0.5rem;
+      border-radius: 20px; background: #FFFFFF; border: 1px solid #FFE0B2;
+      transition: all 0.3s ease;
+    }
+    .dark .stat-block { background: #2D2824; border-color: #4E443C; }
+    .stat-block:hover { transform: translateY(-4px); border-color: #D32F2F; }
+
+    .tag-pill {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.25rem 0.6rem; border-radius: 100px;
+    }
+  
+    /* Hero with assets/bg.png (Optimized readability) */
+    .hero-wings { position: relative; overflow: hidden; background-color: #0F0D0B; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.42) 65%, rgba(15, 13, 11, 0.85) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.7) 0%, rgba(15, 13, 11, 0.25) 35%, rgba(15, 13, 11, 0.8) 85%, #FFF8E1 100%);
+      pointer-events: none;
+    }
+    .dark .hero-overlay {
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 45%, rgba(15, 13, 11, 0.72) 0%, rgba(15, 13, 11, 0.45) 65%, rgba(15, 13, 11, 0.88) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.75) 0%, rgba(15, 13, 11, 0.3) 35%, rgba(15, 13, 11, 0.88) 85%, #0F0D0B 100%);
+    }
+
+    .hero-wings .sauce-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 100px; padding: 0.45rem 1rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      transition: all 0.25s;
+    }
+    .hero-wings .sauce-chip i { color: #FFB300; }
+    .hero-wings .sauce-chip:hover {
+      background: #D32F2F; border-color: #D32F2F; color: #FFFFFF;
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211, 47, 47, 0.5);
+    }
+    .hero-wings .sauce-chip:hover i { color: #FFFFFF; }
+
+    /* Responsive typography helpers */
+    .hero-title { font-size: clamp(3rem, 9vw, 7rem); line-height: 0.92; }
+    .hero-sub { font-size: clamp(2.5rem, 6vw, 5rem); }
+
+  
+    /* Hero solid white button with guaranteed dark text in all themes */
+    .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border: 2px solid #FFFFFF !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(211, 47, 47, 0.55);
+    }
+    .dark .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border-color: #FFFFFF !important;
+    }
+    .dark .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+    }
+  
+    /* Critical Hero & Layout Protection (Zero-FOUC & Offline safety) */
+    .hero-wings, .stadium-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-wings > .absolute, .stadium-hero > .absolute {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-wings img, .stadium-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION -->
+  <!-- ============================================= -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-wing-cream/95 dark:bg-[#0F0D0B]/95 backdrop-blur-md border-b border-wing-red/10 dark:border-wing-red/20 shadow-sm transition-all duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24 gap-3">
+
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 rotate-3 group-hover:rotate-0 shrink-0">
+            <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+          </div>
+          <div class="leading-none">
+            <div class="text-xl sm:text-2xl lg:text-3xl font-display text-[#1E1A17] dark:text-[#F5F0E8] tracking-wide">
+              Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span>
+            </div>
+            <div class="text-[7px] sm:text-[8px] lg:text-[9px] uppercase tracking-[0.35em] text-wing-red font-bold mt-0.5 sm:mt-1">Sports Bar &amp; Grill</div>
+          </div>
+        </a>
+
+        <div class="hidden xl:flex items-center gap-4 2xl:gap-6">
+          <div class="dropdown-custom relative py-4">
+            <button class="nav-link flex items-center gap-1">
+              Home <i class="fas fa-chevron-down text-[9px] ms-1"></i>
+            </button>
+            <div class="dropdown-menu-custom">
+              <a href="index.html" class="dropdown-item">Home 1</a>
+              <a href="home2.html" class="dropdown-item">Home 2</a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="specials.html" class="nav-link">Specials</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="our-story.html" class="nav-link active">About Us</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle RTL / LTR" aria-label="Toggle text direction">
+            <i class="fas fa-right-left text-xs"></i>
+          </button>
+          <button id="theme-toggle" class="hidden xl:flex w-10 h-10 2xl:w-11 2xl:h-11 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle theme" aria-label="Toggle color theme">
+            <i class="fas fa-moon dark:hidden text-xs"></i>
+            <i class="fas fa-sun hidden dark:inline text-xs"></i>
+          </button>
+          <a href="contact.html" class="hidden xl:inline-flex btn-primary h-10 2xl:h-11 px-5 2xl:px-7 rounded-full items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[11px]"></i> Book a Table
+          </a>
+          <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-full bg-wing-red text-white flex items-center justify-center shadow-md">
+            <i class="fas fa-bars text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu xl:hidden">
+        <div class="py-4 px-2 space-y-1">
+          <div>
+            <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 hover:bg-wing-red/15 rounded-xl text-sm cursor-pointer">
+              <span>Home</span>
+              <i id="home-mobile-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+            <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+              <a href="index.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 1
+              </a>
+              <a href="home2.html" class="block py-2.5 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-lg text-sm transition">
+                <i class="fas fa-home w-5 me-2 text-xs"></i> Home 2
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Menu</a>
+          <a href="events.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Events</a>
+          <a href="specials.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Specials</a>
+          <a href="gallery.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Gallery</a>
+          <a href="our-story.html" class="block py-3 px-4 font-bold text-wing-red dark:text-wing-red bg-wing-red/10 dark:bg-wing-red/20 rounded-xl text-sm transition">About Us</a>
+          <a href="contact.html" class="block py-3 px-4 font-medium text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red/10 dark:hover:bg-wing-red/20 rounded-xl text-sm transition">Contact</a>
+          <div class="flex flex-col gap-2.5 pt-4 mt-2 border-t border-wing-red/20 dark:border-wing-red/30">
+            <a href="contact.html" class="text-center btn-primary py-3 rounded-full text-xs font-bold">Book a Table</a>
+            <div class="flex gap-2.5">
+              <button id="mobile-theme-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+              </button>
+              <button id="mobile-rtl-toggle" class="flex-1 py-2.5 rounded-full bg-wing-red/10 dark:bg-wing-red/20 text-wing-red text-xs font-semibold">
+                <i class="fas fa-exchange-alt"></i> RTL
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!-- SECTION 1: STORY HERO (HOME 1 STYLE) -->
+  <!-- ============================================= -->
+    <section class="hero-wings min-h-[75vh] flex flex-col justify-center items-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/bg.png" alt="Wing'd Up sports bar history and roots" class="w-full h-full object-cover object-center">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full relative z-10 flex flex-col justify-center">
+      <div class="text-center max-w-4xl mx-auto animate-fade-up">
+        <span class="inline-block py-1.5 px-3 sm:px-4 rounded-full bg-wing-red text-white text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-5 sm:mb-6 shadow-xl backdrop-blur-sm border border-white/20">
+          <i class="fas fa-fire me-1.5"></i> Family-Owned · Since 2016
+        </span>
+
+        <h1 class="hero-title font-display text-white mb-4 sm:mb-6 break-safe drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)]">
+          MORE THAN WINGS.<br>
+          <span class="text-[#FF4D4D] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">A PLACE</span> <span class="text-wing-amber serif-accent italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">TO BELONG.</span><br>
+          <span class="hero-sub tracking-wide text-white/95">AUSTIN BORN. FLAVOR DRIVEN.</span>
+        </h1>
+
+        <p class="text-white/90 font-medium text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          House-made sauces, fall-off-the-bone wings, and <span class="font-bold text-wing-amber">17 big screens</span> bringing people together since 2016. Your seat is waiting.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-2">
+          <a href="#timeline" class="btn-primary px-7 sm:px-9 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 w-full sm:w-auto shadow-xl">
+            <i class="fas fa-book-open"></i> Read Our Story
+          </a>
+          <a href="contact.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-calendar-alt"></i> Book a Table
+          </a>
+          <a href="menu.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs text-[#1E1A17] shadow-xl transition w-full sm:w-auto">
+            <i class="fas fa-utensils"></i> Explore the Menu
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-2 px-2">
+          <a href="#timeline" class="sauce-chip"><i class="fas fa-calendar"></i> Founded 2016</a>
+          <a href="#timeline" class="sauce-chip"><i class="fas fa-location-pin"></i> Austin, TX</a>
+          <a href="menu.html" class="sauce-chip"><i class="fas fa-award"></i> Fresh Never Frozen</a>
+          <a href="menu.html" class="sauce-chip"><i class="fas fa-pepper-hot"></i> 12 Signature Sauces</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- SECTION 2: BY THE NUMBERS -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto">
+        <div class="stat-block reveal">
+          <div class="font-display text-3xl sm:text-4xl md:text-5xl text-wing-red leading-none">2016</div>
+          <div class="text-[9px] sm:text-[10px] uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5] font-bold mt-2">Year Founded</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="font-display text-3xl sm:text-4xl md:text-5xl text-wing-red leading-none">17</div>
+          <div class="text-[9px] sm:text-[10px] uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5] font-bold mt-2">Big Screens</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="font-display text-3xl sm:text-4xl md:text-5xl text-wing-red leading-none">12</div>
+          <div class="text-[9px] sm:text-[10px] uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5] font-bold mt-2">House Sauces</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="font-display text-3xl sm:text-4xl md:text-5xl text-wing-red leading-none">1M+</div>
+          <div class="text-[9px] sm:text-[10px] uppercase tracking-widest text-wing-ash dark:text-[#B9AFA5] font-bold mt-2">Wings Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 3: About Us (TIMELINE) -->
+  <!-- ============================================= -->
+  <section id="timeline" class="py-16 sm:py-20 lg:py-24 bg-white dark:bg-wing-charcoal relative scroll-mt-24">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-16 reveal">
+        <div class="divider-flame mb-4 sm:mb-6"><i class="fas fa-book-open text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">The Journey</span>
+        <h2 class="section-title font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 sm:mb-4 break-safe">
+          HOW IT <span class="text-wing-red">STARTED</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          From a borrowed fryer to the busiest game-day bar in Austin. Every step mattered.
+        </p>
+      </div>
+
+      <div class="timeline max-w-4xl mx-auto">
+
+        <!-- 2015 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2015</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">The Backyard Beginning</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Marco and Elena started frying wings in a borrowed backyard fryer for friends and fantasy football Sundays. Word spread fast — faster than they could cook.</p>
+        </div>
+
+        <!-- 2016 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2016</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">The First Location</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">A 900-square-foot space on East 6th opened with 6 tables, 3 sauces, and one TV. Opening night sold out in 90 minutes. The dream was alive.</p>
+        </div>
+
+        <!-- 2018 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2018</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">The Sauce Wall</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">We launched our house-made sauce program — 12 sauces, all made in-house daily. The Reaper Challenge was born and quickly became legendary.</p>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2020</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Pandemic Pivot</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">We pivoted to takeout and delivery to keep our team employed. Our community showed up for us — and we never forgot it. Loyalty runs both ways.</p>
+        </div>
+
+        <!-- 2022 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2022</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">The Stadium Drive Move</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">We moved into our current home on Stadium Drive — 17 screens, 32 taps, a full bar, and room for the whole crew. The game-day headquarters was born.</p>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">2024</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Voted #1 in Austin</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Austin Chronicle readers voted us the #1 wings and #1 sports bar in the city. We celebrated by giving away 1,000 free wings to our regulars. Best. Day. Ever.</p>
+        </div>
+
+        <!-- Today -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="year-badge">Today</div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Still Family-Owned</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Marco and Elena still run the show. Same recipes, same values, same obsession with doing it right. Come in and say hi — they're probably at the bar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 4: OUR VALUES -->
+  <!-- ============================================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-6"><i class="fas fa-heart text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">What We Stand For</span>
+        <h2 class="section-title font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 sm:mb-4 break-safe">
+          OUR <span class="text-wing-red">VALUES</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Four things we never compromise on. Every plate, every pour, every game night.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+
+        <div class="value-card reveal">
+          <div class="value-icon bg-wing-red/10 dark:bg-wing-red/20">
+            <i class="fas fa-fire text-wing-red text-xl"></i>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">House-Made Always</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-grow">Every sauce, every rub, every dressing — made fresh in our kitchen. No bottles, no shortcuts. Ever.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-icon bg-wing-orange/10 dark:bg-wing-orange/20">
+            <i class="fas fa-users text-wing-orange text-xl"></i>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Community First</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-grow">We hire local, source local, and give back local. Austin made us — we show up for Austin.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-icon bg-wing-amber/10 dark:bg-wing-amber/20">
+            <i class="fas fa-tv text-wing-amber text-xl"></i>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Every Game Matters</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-grow">NFL, NBA, UFC, MLB, soccer — if it's on, we're showing it. Every seat has a screen. Zero bad views.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-icon bg-wing-red/10 dark:bg-wing-red/20">
+            <i class="fas fa-handshake text-wing-red text-xl"></i>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl text-[#1E1A17] dark:text-[#F5F0E8] mb-2">Regulars, Not Customers</h3>
+          <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed flex-grow">We remember your name, your order, and your team. This is your bar as much as ours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 5: MEET THE TEAM -->
+  <!-- ============================================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-white dark:bg-wing-charcoal relative">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
+      <div class="text-center mb-10 sm:mb-14 reveal">
+        <div class="divider-flame mb-4 sm:mb-6"><i class="fas fa-user-group text-xs"></i></div>
+        <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">The People Behind It</span>
+        <h2 class="section-title font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 sm:mb-4 break-safe">
+          MEET THE <span class="text-wing-red">TEAM</span>
+        </h2>
+        <p class="text-wing-ash dark:text-[#B9AFA5] max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+          Family-owned, staff-run, and powered by a crew that actually gives a damn.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+
+        <div class="team-card reveal">
+          <div class="h-56 sm:h-64 overflow-hidden">
+            <img src="assets/author_marco.jpg" alt="Marco — Co-Founder" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Marco Reyes</h3>
+            <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Co-Founder &amp; Head Chef</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">The sauce mastermind. Every recipe on the menu started in Marco's kitchen notebook.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="h-56 sm:h-64 overflow-hidden">
+            <img src="assets/author_elena.jpg" alt="Elena — Co-Founder" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Elena Reyes</h3>
+            <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Co-Founder &amp; GM</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Runs the floor, the team, and the game-day logistics. If it's smooth, Elena made it happen.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="h-56 sm:h-64 overflow-hidden">
+            <img src="assets/author_james.jpg" alt="James — Bar Manager" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">James Carter</h3>
+            <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Bar Manager</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Curates all 32 taps and builds the cocktail menu. Ask him for a recommendation — trust him.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="h-56 sm:h-64 overflow-hidden">
+            <img src="assets/author_priya.jpg" alt="Priya — Event Director" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <h3 class="font-display text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Priya Shah</h3>
+            <p class="text-[10px] uppercase tracking-widest text-wing-red font-bold mb-2">Event Director</p>
+            <p class="text-[11px] sm:text-xs text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Plans every trivia night, watch party, and private event. She makes the fun happen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 6: COMMUNITY -->
+  <!-- ============================================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-wing-cream dark:bg-wing-dark relative sports-bar-bg">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-center">
+
+        <div class="reveal order-2 lg:order-1">
+          <div class="relative rounded-3xl sm:rounded-[40px] overflow-hidden shadow-2xl">
+            <img src="assets/rooted_in_austin.jpg" alt="Community at Wing'd Up" class="w-full h-72 sm:h-96 md:h-[420px] lg:h-[560px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-wing-charcoal/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+              <span class="tag-pill bg-wing-amber text-wing-charcoal !text-[9px] !px-3 !py-1.5"><i class="fas fa-heart"></i> Austin Born &amp; Raised</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal order-1 lg:order-2">
+          <div class="divider-flame mb-4 sm:mb-6"><i class="fas fa-hand-holding-heart text-xs"></i></div>
+          <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-wing-red font-bold mb-3 sm:mb-4">Giving Back</span>
+          <h2 class="section-title font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-5 sm:mb-6 leading-none break-safe">
+            ROOTED IN <br>
+            <span class="text-wing-red serif-accent italic section-title-sm">Austin</span>
+          </h2>
+          <p class="text-[#3A332E] dark:text-[#D9CFC4] text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
+            We didn't build this bar alone — Austin built it with us. So we show up for the city that shows up for us. Every month, every season, every game.
+          </p>
+
+          <div class="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
+            <div class="flex items-start gap-3 sm:gap-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-wing-red/10 dark:bg-wing-red/20 flex items-center justify-center shrink-0">
+                <i class="fas fa-utensils text-wing-red text-sm sm:text-base"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Community Wing Nights</h4>
+                <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Monthly free wing nights for local teachers, nurses, and first responders.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 sm:gap-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-wing-orange/10 dark:bg-wing-orange/20 flex items-center justify-center shrink-0">
+                <i class="fas fa-futbol text-wing-orange text-sm sm:text-base"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Youth Sports Sponsorship</h4>
+                <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">We sponsor 4 local youth teams every season. Their jerseys? They say Wing'd Up.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 sm:gap-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-wing-amber/10 dark:bg-wing-amber/20 flex items-center justify-center shrink-0">
+                <i class="fas fa-recycle text-wing-amber text-sm sm:text-base"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-lg sm:text-xl text-[#1E1A17] dark:text-[#F5F0E8] mb-0.5">Zero-Waste Kitchen</h4>
+                <p class="text-xs sm:text-sm text-wing-ash dark:text-[#B9AFA5] leading-relaxed">Used fryer oil goes to local biodiesel. Food scraps go to a local farm. We try.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn-primary px-7 sm:px-10 py-3.5 sm:py-4 rounded-full inline-flex items-center gap-2 text-xs font-semibold">
+            <i class="fas fa-envelope"></i> Partner With Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 7: QUOTE / PRESS -->
+  <!-- ============================================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-stadium-dark relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="assets/bg.png" alt="Bar atmosphere" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-stadium-dark via-stadium-dark/90 to-stadium-dark"></div>
+
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10 text-center">
+      <div class="reveal">
+        <div class="text-wing-amber text-5xl sm:text-6xl font-serif mb-4 leading-none">&ldquo;</div>
+        <blockquote class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-6 break-safe">
+          THE RARE SPORTS BAR WHERE THE FOOD IS AS GOOD AS THE GAME.
+        </blockquote>
+        <p class="text-wing-amber text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] mb-8">— Austin Chronicle, 2024</p>
+
+        <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 opacity-60">
+          <span class="font-display text-lg sm:text-xl text-white/70 tracking-wider">AUSTIN CHRONICLE</span>
+          <span class="text-white/20">|</span>
+          <span class="font-display text-lg sm:text-xl text-white/70 tracking-wider">EATER AUSTIN</span>
+          <span class="text-white/20">|</span>
+          <span class="font-display text-lg sm:text-xl text-white/70 tracking-wider">TEXAS MONTHLY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA: COME VISIT -->
+  <!-- ============================================= -->
+  <section class="py-14 sm:py-20 md:py-24 bg-gradient-to-br from-wing-red to-wing-red-dark relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-white/10"></div>
+    <div class="absolute -bottom-20 -left-20 w-56 sm:w-80 h-56 sm:h-80 rounded-full bg-white/5"></div>
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 text-center relative z-10 reveal">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full mb-5 sm:mb-6">
+        <i class="fas fa-door-open text-white text-[10px] sm:text-xs"></i>
+        <span class="text-white text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-semibold">Walk-ins Welcome · Regulars Remembered</span>
+      </div>
+      <h2 class="font-display text-white mb-5 sm:mb-6 leading-none break-safe" style="font-size: clamp(2.5rem, 7vw, 6rem);">
+        COME BE PART <br class="hidden md:block">
+        <span class="text-wing-amber serif-accent italic" style="font-size: clamp(1.8rem, 5vw, 4rem);">Of the Story.</span>
+      </h2>
+      <p class="text-white/85 text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-7 sm:mb-10 font-light leading-relaxed px-2">
+        Book a table, grab a seat at the bar, or just walk in. Marco and Elena would love to meet you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
+        <a href="contact.html" class="bg-white text-wing-red hover:bg-wing-charcoal hover:text-white px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-2xl inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i> Book a Table
+        </a>
+        <a href="tel:+15125550142" class="border-2 border-white text-white hover:bg-white hover:text-wing-red px-7 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 inline-flex items-center justify-center gap-2">
+          <i class="fas fa-phone"></i> Call The Bar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="bg-wing-charcoal dark:bg-[#090705] text-white pt-14 sm:pt-20 pb-6 sm:pb-8 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none opacity-[0.04] translate-y-1/4">
+      <h2 class="font-display text-[18vw] whitespace-nowrap text-white">WING'D UP</h2>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 mb-10 sm:mb-16">
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <div class="flex items-center gap-3 mb-5 sm:mb-6">
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center rotate-3 shrink-0">
+              <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+            </div>
+            <div class="leading-none">
+              <div class="text-2xl sm:text-3xl font-display text-white">Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span></div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.35em] text-wing-red font-semibold mt-1">Sports Bar &amp; Grill</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-5 sm:mb-6 max-w-sm">
+            Your neighborhood game-day headquarters. House-made sauces, cold beers, and every match on 17 big screens.
+          </p>
+          <div class="flex gap-2.5 sm:gap-3">
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-instagram text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-facebook-f text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-x-twitter text-xs sm:text-sm"></i></a>
+            <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wing-red hover:bg-wing-red transition-all duration-300"><i class="fab fa-youtube text-xs sm:text-sm"></i></a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Explore</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="index.html" class="text-white/60 hover:text-wing-amber transition">Home 1</a></li>
+            <li><a href="home2.html" class="text-white/60 hover:text-wing-amber transition">Home 2</a></li>
+            <li><a href="menu.html" class="text-white/60 hover:text-wing-amber transition">Menu</a></li>
+            <li><a href="events.html" class="text-white/60 hover:text-wing-amber transition">Events</a></li>
+            <li><a href="specials.html" class="text-white/60 hover:text-wing-amber transition">Specials</a></li>
+            <li><a href="gallery.html" class="text-white/60 hover:text-wing-amber transition">Gallery</a></li>
+            <li><a href="our-story.html" class="text-white/60 hover:text-wing-amber transition">About Us</a></li>
+            <li><a href="contact.html" class="text-white/60 hover:text-wing-amber transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">About Us</h4>
+          <ul class="space-y-2.5 sm:space-y-3 text-sm">
+            <li><a href="#timeline" class="text-white/60 hover:text-wing-amber transition">The Journey</a></li>
+            <li><a href="#timeline" class="text-white/60 hover:text-wing-amber transition">Our Values</a></li>
+            <li><a href="#timeline" class="text-white/60 hover:text-wing-amber transition">Meet the Team</a></li>
+            <li><a href="#timeline" class="text-white/60 hover:text-wing-amber transition">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:col-span-2 lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wing-amber mb-4 sm:mb-6">Get in Touch</h4>
+          <ul class="space-y-3 sm:space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">1420 Stadium Drive, Unit 3<br>Austin, TX 78704</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-wing-red text-xs"></i>
+              <a href="tel:+15125550142" class="text-white/60 hover:text-wing-amber transition">+1 (512) 555-0142</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-wing-red text-xs"></i>
+              <a href="mailto:hello@wingdupbar.com" class="text-white/60 hover:text-wing-amber transition break-all">hello@wingdupbar.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-wing-red mt-1 text-xs"></i>
+              <span class="text-white/60">Mon–Thu: 11am – 12am<br>Fri–Sat: 11am – 2am<br>Sun: 10am – 11pm (Game Day Brunch)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-5 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+        <p class="text-white/40 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center md:text-left">© 2026 Wing'd Up Sports Bar. All rights reserved. Please drink responsibly.</p>
+        <div class="flex gap-4 sm:gap-6 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/40">
+          <a href="#" class="hover:text-wing-amber transition">Privacy</a>
+          <a href="#" class="hover:text-wing-amber transition">Terms</a>
+          <a href="#" class="hover:text-wing-amber transition">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+      themeBtns.forEach(btn => {
+        btn?.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL / LTR
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+      const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+      if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          if (mobileMenu.classList.contains('open')) {
+            icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        });
+      }
+
+      // Reveal on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · Page Not Found · Wing'd Up Sports Bar</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D32F2F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7v10l10 5 10-5V7l-10-5zM2 7l10 5 10-5M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="robots" content="noindex" />
+
+  <script src="assets/tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'wing-red': '#D32F2F',
+            'wing-red-dark': '#B71C1C',
+            'wing-orange': '#F57C00',
+            'wing-amber': '#FFB300',
+            'wing-cream': '#FFF8E1',
+            'wing-charcoal': '#1E1A17',
+            'wing-dark': '#0F0D0B',
+            'wing-ash': '#6D645C',
+            'wing-smoke': '#2D2824',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFF8E1;
+      color: #1E1A17;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #0F0D0B; color: #F5F0E8; }
+    h1, h2, h3 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1; }
+
+    .btn-primary {
+      background-color: #D32F2F; color: #FFFFFF; font-weight: 700; border-radius: 50px;
+      transition: all 0.3s ease; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(211,47,47,0.5); white-space: nowrap;
+    }
+    .btn-primary:hover {
+      background-color: #B71C1C; transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(211,47,47,0.6);
+    }
+    .btn-outline {
+      border: 2px solid #1E1A17; color: #1E1A17; background: transparent; border-radius: 50px;
+      font-weight: 700; transition: all 0.3s; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem;
+    }
+    .btn-outline:hover { background-color: #1E1A17; color: #FFF8E1; transform: translateY(-2px); }
+    .dark .btn-outline { border-color: #F5F0E8; color: #F5F0E8; }
+    .dark .btn-outline:hover { background-color: #F5F0E8; color: #1E1A17; }
+
+    .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(211,47,47,0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.1) 0%, transparent 40%);
+    }
+    .dark .sports-bar-bg {
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,138,101,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255,179,0,0.08) 0%, transparent 40%);
+    }
+  
+    /* Hero solid white button with guaranteed dark text in all themes */
+    .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border: 2px solid #FFFFFF !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(211, 47, 47, 0.55);
+    }
+    .dark .hero-btn-white {
+      background-color: #FFFFFF !important;
+      color: #1E1A17 !important;
+      border-color: #FFFFFF !important;
+    }
+    .dark .hero-btn-white:hover {
+      background-color: #D32F2F !important;
+      color: #FFFFFF !important;
+      border-color: #D32F2F !important;
+    }
+  
+    /* Critical Hero & Layout Protection (Zero-FOUC & Offline safety) */
+    .hero-wings, .stadium-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-wings > .absolute, .stadium-hero > .absolute {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-wings img, .stadium-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body class="sports-bar-bg min-h-screen flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
+
+  <!-- Soft background glow -->
+  <div class="absolute -top-32 -right-32 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-wing-red/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -left-32 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-wing-amber/10 blur-3xl pointer-events-none"></div>
+
+  <!-- Content -->
+  <main class="relative z-10 text-center max-w-xl mx-auto w-full">
+
+    <!-- Brand mark -->
+    <div class="inline-flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-wing-red to-wing-orange flex items-center justify-center shadow-lg rotate-3">
+        <i class="fas fa-drumstick-bite text-white text-base sm:text-lg"></i>
+      </div>
+      <div class="leading-none text-left">
+        <div class="text-xl sm:text-2xl font-display tracking-wide">
+          Wing<span class="text-wing-red">'d</span> <span class="text-wing-orange">Up</span>
+        </div>
+        <div class="text-[7px] sm:text-[8px] uppercase tracking-[0.35em] text-wing-red font-bold mt-0.5">Sports Bar &amp; Grill</div>
+      </div>
+    </div>
+
+    <!-- 404 number -->
+    <div class="font-display leading-none mb-2 sm:mb-3 break-safe"
+         style="font-size: clamp(5rem, 22vw, 10rem); color: transparent; -webkit-text-stroke: 3px #D32F2F;">
+      404
+    </div>
+
+    <h1 class="font-display text-[#1E1A17] dark:text-[#F5F0E8] mb-3 sm:mb-4 break-safe"
+        style="font-size: clamp(1.75rem, 5vw, 2.75rem);">
+      THIS PAGE WENT <span class="text-wing-red">OFF-SCREEN</span>
+    </h1>
+
+    <p class="text-wing-ash dark:text-[#B9AFA5] text-sm sm:text-base leading-relaxed max-w-md mx-auto mb-7 sm:mb-9 px-2">
+      Looks like the page you're looking for got benched. It may have moved, been renamed, or never existed. Let's get you back to the action.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center items-center px-2">
+      <a href="index.html" class="btn-primary px-7 sm:px-9 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+        <i class="fas fa-house"></i> Back to Home
+      </a>
+      <a href="menu.html" class="hero-btn-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs dark:bg-wing-smoke w-full sm:w-auto">
+        <i class="fas fa-utensils"></i> View Menu
+      </a>
+    </div>
+
+    <!-- Quick links -->
+    <div class="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-wing-red/15 dark:border-wing-amber/15">
+      <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-wing-ash dark:text-[#B9AFA5] font-bold mb-4">Or try these</p>
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <a href="events.html" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-2 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:text-white hover:border-wing-red transition">Events</a>
+        <a href="specials.html" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-2 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:text-white hover:border-wing-red transition">Specials</a>
+        <a href="gallery.html" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-2 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:text-white hover:border-wing-red transition">Gallery</a>
+        <a href="our-story.html" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-2 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:text-white hover:border-wing-red transition">About Us</a>
+        <a href="contact.html" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-2 rounded-full bg-white dark:bg-wing-smoke border border-wing-red/15 dark:border-wing-red/30 text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:text-white hover:border-wing-red transition">Contact</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Small theme + RTL toggles, bottom corner -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex gap-2">
+    <button id="rtl-toggle" class="w-10 h-10 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 flex items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle RTL / LTR" aria-label="Toggle text direction">
+      <i class="fas fa-right-left text-xs"></i>
+    </button>
+    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-white dark:bg-[#2D2824] border border-wing-red/20 dark:border-wing-red/30 flex items-center justify-center text-[#1E1A17] dark:text-[#F5F0E8] hover:bg-wing-red hover:border-wing-red hover:text-white shadow-sm transition-all duration-300" title="Toggle theme" aria-label="Toggle color theme">
+      <i class="fas fa-moon dark:hidden text-xs"></i>
+      <i class="fas fa-sun hidden dark:inline text-xs"></i>
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle (respects saved theme)
+      const themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      }
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL / LTR toggle
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+    });
+  </script>
+
+</body>
+</html>
